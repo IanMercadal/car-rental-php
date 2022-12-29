@@ -1,0 +1,98 @@
+:root {
+    --primary-color: #0BA5BE;
+    --secondary-color: #CFCBC8;
+    --white: #fff;
+    --primary-font: 'Inter', sans-serif;
+    --secondary-font: 'Lato', sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* GLOBALES */
+
+html {
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+p {
+    font-size: 1.4rem;
+}
+a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: black;
+}
+
+/* UTILIS */
+.btn {
+    width: 80px;
+    padding: 0.8rem;
+    text-align: center;
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transition: all 0.4s;
+}
+
+/* NAVIGATION */
+.header {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.navigation > * {
+    width: 400px
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.pages {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.page {
+    padding: 0.8rem;
+}
+.page:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transition: all 0.4s;
+}
+.page.active {
+    font-weight: bolder;
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+}
+.option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
