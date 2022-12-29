@@ -2,6 +2,9 @@
     --primary-color: #0BA5BE;
     --secondary-color: #CFCBC8;
     --white: #fff;
+
+    --separacion: 5rem;
+
     --primary-font: 'Inter', sans-serif;
     --secondary-font: 'Lato', sans-serif;
 }
@@ -20,22 +23,37 @@ html {
 
 body {
     margin: 0;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 }
-
+h1,h2,h3 {
+    margin: 0;
+}
+h1 {
+    font-size: 3rem;   
+}
 p {
     font-size: 1.4rem;
+    font-family: var(--secondary-font);
+    margin: 0;
 }
 a {
     text-decoration: none;
     font-size: 1.4rem;
     color: black;
+    cursor: pointer;
 }
-
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
 /* UTILIS */
 .btn {
-    width: 80px;
+    width: 82px;
     padding: 0.8rem;
     text-align: center;
 }
@@ -48,12 +66,14 @@ a {
     color: var(--primary-color);
     transition: all 0.4s;
 }
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
 
 /* NAVIGATION */
-.header {
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
 .navigation {
     display: flex;
     flex-direction: row;
@@ -61,9 +81,6 @@ a {
     align-items: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
-}
-.navigation > * {
-    width: 400px
 }
 .logo {
     display: flex;
@@ -95,4 +112,73 @@ a {
     align-items: center;
     justify-content: center;
     gap: 2rem;
+}
+
+/* BANNER */
+.banner {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.banner-img {
+    background-image: url(../img/banner-car.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+
+/* OPTIONS */
+.options-example {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.option-example {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    width: 150px;
+    height: 50px;
+    justify-items: center;
+    align-items: center;
+    border-right: 2px solid var(--primary-color);
+    height: 70px;
+}
+.option-example-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Iconos */
+.iconos {
+    padding: var(--separacion) 0;
+}
+@media(min-width: 768px) {
+    .iconos {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+
+/* CARS */
+.car-list {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.2rem;
+}
+.car-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+.caracteristicas {
+    display: flex;
+    flex-direction: row;
+    gap: 0.6rem;
 }
