@@ -27,10 +27,10 @@
                     </svg>
                 </div>
                 <div class="pages">
-                    <a class="page active" href="#">Home</a>
-                    <a class="page" href="#">Cars</a>
-                    <a class="page" href="#">Services</a>
-                    <a class="page" href="#">Testimonials</a>
+                    <a class="page active" href="<?php base_url?>/">Home</a>
+                    <a class="page" href="<?php base_url?>car/list">Cars</a>
+                    <a class="page" href="<?php base_url?>/services">Services</a>
+                    <a class="page" href="<?php base_url?>/testimonials">Testimonials</a>
                 </div>
                 <div class="option">
                     <a class="btn btn-primary" href="#">Register</a>
