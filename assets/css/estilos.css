@@ -3,7 +3,7 @@
     --secondary-color: #CFCBC8;
     --white: #fff;
 
-    --separacion: 5rem;
+    --separacion: 3rem;
 
     --primary-font: 'Inter', sans-serif;
     --secondary-font: 'Lato', sans-serif;
@@ -23,11 +23,10 @@ html {
 
 body {
     margin: 0;
-    /* margin-left: 8rem;
-    margin-right: 8rem; */
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    align-items: center;
 }
 h1,h2,h3 {
     margin: 0;
@@ -89,6 +88,7 @@ li {
 .header {
     margin-left: 2rem;
     margin-right: 2rem;
+    width: 98%;
 }
 .navigation {
     display: flex;
@@ -103,6 +103,7 @@ li {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: 200px;
 }
 .pages {
     display: flex;
@@ -128,6 +129,7 @@ li {
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    width: 200px;
 }
 
 /* BANNER */
@@ -151,16 +153,18 @@ li {
 .options-example {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1rem;
 }
 .option-example {
     display: grid;
     grid-template-columns: 20% 80%;
-    width: 150px;
+    width: 250px;
     height: 50px;
     justify-items: center;
     align-items: center;
-    border-right: 2px solid var(--primary-color);
+    border-left: 2px solid var(--primary-color);
     height: 70px;
 }
 .option-example-icon {
@@ -169,28 +173,39 @@ li {
     align-items: center;
 }
 
-/* Iconos */
-.iconos {
+/* Our Serices */
+.our-services {
     padding: var(--separacion) 0;
 }
-@media(min-width: 768px) {
-    .iconos {
-        display: flex;
-        gap: 2rem;
-    }
+
+/* Iconos */
+.icono {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.iconos {
+    padding: var(--separacion) 0;
 }
 
 
 /* CARS */
+#index-cars {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: var(--separacion) 0;
+}
 .car-list {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 1.2rem;
+    justify-items: center;
 }
 .car-demo {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.8rem;
 }
 .caracteristicas {
@@ -198,6 +213,12 @@ li {
     flex-direction: row;
     gap: 0.6rem;
 }
+.car-picture {
+    width: 100%;
+    max-width: 250px;
+}
+
+/* FOOTER */
 .footer {
     background-color: var(--primary-color);
     color: var(--white);
@@ -205,6 +226,7 @@ li {
     grid-template-rows: 80% 20%;
     gap: 1rem;
     justify-items: center;
+    width: 100%;
 }
 .footer-nav {
     display: flex;
@@ -229,4 +251,51 @@ li {
     margin: 1.2rem;
     font-size: 18px;
     font-weight: bolder;
+}
+
+/* MEDIA QUERIES */
+
+/* max-width: 1150px */
+@media (max-width: 1150px) {
+    .car-list {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+        justify-content: center;
+    }
+}
+/* max-width: 768px */
+@media (max-width: 768px) {
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        gap: 0.4rem;
+        justify-content: center;
+    }
+    .pages {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+    }
+}
+/* min-width: 768px */
+@media(min-width: 768px) {
+    .iconos {
+        display: flex;
+        gap: 2rem;
+    }
+}
+@media (max-width: 554px) {
+    .options-example {
+        justify-content: center
+    }
+    .option-example {
+        border-bottom: 2px solid var(--primary-color);
+        border-left: none;
+    }
 }
