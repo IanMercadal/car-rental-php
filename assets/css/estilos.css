@@ -221,6 +221,7 @@ li {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    padding: var(--separacion) 0;
 }
 .big-car {
     display: grid;
@@ -253,6 +254,11 @@ li {
     justify-content: center;
     padding: var(--separacion) 0;
 }
+.cars-filtered {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 .car-form {
     display: flex;
     flex-direction: row;
@@ -262,6 +268,12 @@ li {
     height: 50px;
     background-color: var(--secondary-color);
     border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.car-form input[type=text], .car-form input[type=number], .car-form select {
+    border: none;
+    margin-left: 0.8rem;
+    width: 150px;
 }
 
 /* FOOTER */
@@ -327,6 +339,20 @@ li {
         justify-items: center;
         justify-content: center;
         align-items: center;
+    }
+    .car-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        height: auto;
+    }
+    .car-form > * {
+        padding: 1rem;
+    }
+    .big-car {
+        display: flex;
+        flex-direction: column;
     }
 }
 /* min-width: 768px */
