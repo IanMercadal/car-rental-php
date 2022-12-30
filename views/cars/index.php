@@ -1,74 +1,79 @@
-<div class="banner">
-    <div class="banner-text">
-        <h1>Perfect place to buy or rent cars</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nulla enim, ab numquam, doloremque debitis dicta eaque perferendis dolorum, blanditiis voluptates? Mollitia inventore dolores libero illo, dicta aliquid nobis illum?</p>
-        <div class="buttons">
-            <a class="btn btn-primary">Buy Cars</a>
-            <a class="btn btn-primary">Rent Cars</a>
+<!-- BANNER -->
+<div class="contenedor">
+    <div class="banner">
+        <div class="banner-text">
+            <h1>Perfect place to buy or rent cars</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nulla enim, ab numquam, doloremque debitis dicta eaque perferendis dolorum, blanditiis voluptates? Mollitia inventore dolores libero illo, dicta aliquid nobis illum?</p>
+            <div class="buttons">
+                <a class="btn btn-primary">Buy Cars</a>
+                <a class="btn btn-primary">Rent Cars</a>
+            </div>
         </div>
-    </div>
-    <div class="banner-img"></div>
-</div>
-
-<div class="options-example">
-    <div class="option-example">
-        <div class="option-example-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <circle cx="10" cy="10" r="7" />
-                <line x1="21" y1="21" x2="15" y2="15" />
-            </svg>
-        </div>
-
-        <div class="option-example-text">
-            <p>Search Brand</p>
-            <p><b>BMW</b></p>
-        </div>
-    </div>
-    <div class="option-example">
-        <div class="option-example-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <circle cx="10" cy="10" r="7" />
-                <line x1="21" y1="21" x2="15" y2="15" />
-            </svg>
-        </div>
-
-        <div class="option-example-text">
-            <p>Search Brand</p>
-            <p><b>BMW</b></p>
-        </div>
-    </div>
-    <div class="option-example">
-        <div class="option-example-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <circle cx="10" cy="10" r="7" />
-                <line x1="21" y1="21" x2="15" y2="15" />
-            </svg>
-        </div>
-
-        <div class="option-example-text">
-            <p>Search Brand</p>
-            <p><b>BMW</b></p>
-        </div>
-    </div>
-    <div class="option-example">
-        <div class="option-example-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <circle cx="10" cy="10" r="7" />
-                <line x1="21" y1="21" x2="15" y2="15" />
-            </svg>
-        </div>
-
-        <div class="option-example-text">
-            <p>Search Brand</p>
-            <p><b>BMW</b></p>
-        </div>
+        <div class="banner-img"></div>
     </div>
 </div>
+<!-- OPTIONS -->
+<section class="contenedor">
+    <div class="options-example">
+        <div class="option-example">
+            <div class="option-example-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="10" cy="10" r="7" />
+                    <line x1="21" y1="21" x2="15" y2="15" />
+                </svg>
+            </div>
 
+            <div class="option-example-text">
+                <p>Search Brand</p>
+                <p><b>BMW</b></p>
+            </div>
+        </div>
+        <div class="option-example">
+            <div class="option-example-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="10" cy="10" r="7" />
+                    <line x1="21" y1="21" x2="15" y2="15" />
+                </svg>
+            </div>
+
+            <div class="option-example-text">
+                <p>Search Brand</p>
+                <p><b>BMW</b></p>
+            </div>
+        </div>
+        <div class="option-example">
+            <div class="option-example-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="10" cy="10" r="7" />
+                    <line x1="21" y1="21" x2="15" y2="15" />
+                </svg>
+            </div>
+
+            <div class="option-example-text">
+                <p>Search Brand</p>
+                <p><b>BMW</b></p>
+            </div>
+        </div>
+        <div class="option-example">
+            <div class="option-example-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="10" cy="10" r="7" />
+                    <line x1="21" y1="21" x2="15" y2="15" />
+                </svg>
+            </div>
+
+            <div class="option-example-text">
+                <p>Search Brand</p>
+                <p><b>BMW</b></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ICONOS -->
 <section class="contenedor">
     <div class="iconos">
         <div class="icono">
@@ -106,7 +111,7 @@
         </div>
     </div>
 </section>
-
+<!-- CAR LIST -->
 <section class="contenedor">
     <div class="car-list">
         <div class="car-demo">

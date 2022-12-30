@@ -23,8 +23,8 @@ html {
 
 body {
     margin: 0;
-    margin-left: 8rem;
-    margin-right: 8rem;
+    /* margin-left: 8rem;
+    margin-right: 8rem; */
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -35,8 +35,14 @@ h1,h2,h3 {
 h1 {
     font-size: 3rem;   
 }
+h2 {
+    font-size: 2.4rem;   
+}
+h3 {
+    font-size: 2rem;   
+}
 p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-family: var(--secondary-font);
     margin: 0;
 }
@@ -46,12 +52,18 @@ a {
     color: black;
     cursor: pointer;
 }
+li {
+    list-style-type: none;
+}
 .contenedor {
     max-width: 120rem;
     width: 90%;
     margin: 0 auto;
 }
 /* UTILIS */
+.text-center {
+    text-align: center;
+}
 .btn {
     width: 82px;
     padding: 0.8rem;
@@ -74,6 +86,10 @@ a {
 }
 
 /* NAVIGATION */
+.header {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
 .navigation {
     display: flex;
     flex-direction: row;
@@ -181,4 +197,36 @@ a {
     display: flex;
     flex-direction: row;
     gap: 0.6rem;
+}
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: grid;
+    grid-template-rows: 80% 20%;
+    gap: 1rem;
+    justify-items: center;
+}
+.footer-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 1rem;
+}
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.footer-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8rem;
+}
+.footer-copy {
+    margin: 1.2rem;
+    font-size: 18px;
+    font-weight: bolder;
 }
