@@ -28,8 +28,8 @@
                 </div>
                 <div class="pages">
                     <a class="page active" href="<?php base_url?>/">Home</a>
-                    <a class="page" href="<?php base_url?>car/list">Cars</a>
-                    <a class="page" href="<?php base_url?>/services">Services</a>
+                    <a class="page" href="<?php base_url?>/car/list">Cars</a>
+                    <a class="page" href="<?php base_url?>/service/index">Services</a>
                     <a class="page" href="<?php base_url?>/testimonials">Testimonials</a>
                 </div>
                 <div class="option">

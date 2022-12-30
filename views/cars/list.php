@@ -1,11 +1,10 @@
 <section class="contenedor">
     <div class="cars-filtered">
-        <h3 class="text-center">Our Cars</h3>
+        <h1 class="text-center">Our Cars</h1>
         <div class="filtros">
             <!-- Poner box-shadow al div filtros -->
             <div class="search-box">
                 <form class="car-form" method="post">
-                    <h3>Filtros</h3>
                     <div class="input-box">
                         <label>Brand</label>
                         <select>
@@ -23,6 +22,22 @@
                         <label>Price</label>
                         <input type="number">
                     </div>
+                    <div class="input-box">
+                        <label>Rating</label>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="16" y1="9" x2="12" y2="5" />
+                            <line x1="8" y1="9" x2="12" y2="5" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="16" y1="15" x2="12" y2="19" />
+                            <line x1="8" y1="15" x2="12" y2="19" />
+                        </svg>
+                    </div>
+                    <button type="submit">Submit</button>
                 </form>
             </div>
         </div>
