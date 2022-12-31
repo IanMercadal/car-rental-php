@@ -33,8 +33,8 @@
                     <a class="page" href="<?php base_url?>/testimonials/index">Testimonials</a>
                 </div>
                 <div class="option">
-                    <a class="btn btn-primary" href="#">Register</a>
-                    <a class="btn btn-primary" href="#">Login</a>
+                    <a class="btn btn-primary" href="<?php base_url?>/user/register">Register</a>
+                    <a class="btn btn-primary" href="<?php base_url?>/user/login">Login</a>
                 </div>
             </nav>
         </header>
