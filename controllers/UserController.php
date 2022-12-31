@@ -3,7 +3,7 @@
 class userController {
     public function index() {
         // renderizar vista
-        echo "Controlador Usuarios, acción Index";
+        require_once './views/user/index.php';
     }
     public function register() {
         // renderizar vista
