@@ -4,7 +4,7 @@
 
 
         <div class="footer-info">
-            <h3 class="text-center">Menu</h3>
+            <h3>Menu</h3>
             
             <div class="footer-data">
                 <p>Home</p>
@@ -24,7 +24,7 @@
         </div>
 
         <div class="footer-info">
-            <h3 class="text-center">Contactar</h3>
+            <h3>Contactar</h3>
             
             <div class="footer-data">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">

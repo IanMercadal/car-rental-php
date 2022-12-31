@@ -37,7 +37,7 @@
                             <line x1="8" y1="15" x2="12" y2="19" />
                         </svg>
                     </div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
