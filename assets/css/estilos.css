@@ -474,7 +474,7 @@ button {
 .form-auth {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     gap: 1rem;
     background-color: var(--secondary-color);
@@ -482,7 +482,58 @@ button {
 .form-auth > * {
     margin: 1rem ;
 }
-
+.register {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: var(--separacion);
+    height: 500px;
+    align-items: stretch;
+}
+.register .register-info {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.register .form-auth {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.register-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--primary-color);
+    justify-content: flex-start;
+}
+.register-info h3 {
+    text-transform: uppercase;
+}
+.register-info > *{
+    padding: 1rem;
+}
+.register-info a {
+    margin: 1rem;
+    width: 150px;
+}
+.form-columns {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.form-columns > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.form-email {
+    display: flex;
+    flex-direction: column;
+}
+.btn-auth {
+    background-color: var(--white);
+}
+.btn-auth:hover {
+    background-color: var(--secondary-color);
+}
 /* USER INFO */
 .user-info {
     display: grid;
@@ -490,22 +541,21 @@ button {
     justify-items: center;
     padding: var(--separacion);
     height: 500px;
+    width: 100%;
 }
 .top-row {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 1rem;
+    align-items: flex-end;
     width: 400px;
     border-bottom: solid 2px var(--primary-color);
 }
 .top-row a {
-    padding: 0.4rem;
-    margin-bottom: 0.4rem;
+    padding: 1.4rem;
 }
 .top-row a:hover {
     background-color: var(--secondary-color);
-    color: var(--white);
+    color: #000000;
     transition: all ease-in 0.2s;
 }
 .active-data {
@@ -513,7 +563,8 @@ button {
     background-color: var(--primary-color);
 }
 .bottom-row {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     background-color: var(--secondary-color);
     display: flex;
     flex-direction: column;
