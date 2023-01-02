@@ -1,80 +1,3 @@
-<!-- BANNER -->
-<div class="contenedor">
-    <div class="banner-inicio">
-        <div class="banner">
-            <div class="banner-text">
-                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nulla enim, ab numquam, doloremque </h1>
-                <p>Debitis dicta eaque perferendis dolorum, blanditiis voluptates? Mollitia inventore dolores libero illo, dicta aliquid nobis illum?</p>
-                <div class="buttons">
-                    <a class="btn btn-primary">Buy Cars</a>
-                    <a class="btn btn-primary">Rent Cars</a>
-                </div>
-            </div>
-            <div class="banner-img"></div>
-        </div>
-        <div class="options-example">
-            <div class="option-example">
-                <div class="option-example-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <circle cx="10" cy="10" r="7" />
-                        <line x1="21" y1="21" x2="15" y2="15" />
-                    </svg>
-                </div>
-
-                <div class="option-example-text">
-                    <p>Search Brand</p>
-                    <p><b>BMW</b></p>
-                </div>
-            </div>
-            <div class="option-example">
-                <div class="option-example-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <circle cx="12" cy="11" r="3" />
-                        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
-                    </svg>
-                </div>
-
-                <div class="option-example-text">
-                    <p>Location</p>
-                    <p><b>Spain</b></p>
-                </div>
-            </div>
-            <div class="option-example">
-                <div class="option-example-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-wallet" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12" />
-                        <path d="M20 12v4h-4a2 2 0 0 1 0 -4h4" />
-                    </svg>
-                </div>
-
-                <div class="option-example-text">
-                    <p>Price Range (Buy)</p>
-                    <p><b>60k - 200k</b></p>
-                </div>
-            </div>
-            <div class="option-example">
-                <div class="option-example-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cash-banknote" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <circle cx="12" cy="12" r="3" />
-                        <rect x="3" y="6" width="18" height="12" rx="2" />
-                        <line x1="18" y1="12" x2="18.01" y2="12" />
-                        <line x1="6" y1="12" x2="6.01" y2="12" />
-                    </svg>
-                </div>
-
-                <div class="option-example-text">
-                    <p>Price Range (Rent)</p>
-                    <p><b>250$ - 500$</b></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
 <!-- OUR SERVICES -->
 <section class="contenedor">
     <div class="our-services text-center">
@@ -120,7 +43,7 @@
 <!-- CAR LIST -->
 <section class="contenedor">
     <div id="index-cars">
-        <h2 class="text-center">Some cars</h2>
+        <h2 class="text-center">Popular cars</h2>
         <div class="car-list">
             <div class="car-demo">
                 <img class="car-picture" src="<?php echo base_url ?>assets/img/bmw.jpg">
@@ -182,7 +105,68 @@
                 </div>
                 <a href="#" class="btn btn-primary">Ver</a>
             </div>
+            <div class="car-demo">
+                <img class="car-picture" src="<?php echo base_url ?>assets/img/bmw.jpg">
+                <div>
+                    <p><b>BMW</b></p>
+                    <h3>BMW Bravus M3</h3>
+                    <div class="caracteristicas">
+                        <p><b>Color:</b> Azul</p>
+                        <p><b>CV:</b> 250</p>
+                        <p><b>Asientos:</b> 5</p>
+                    </div>
+                    <p><b>Precio:</b> 250$</p>
+                    
+                </div>
+                <a href="#" class="btn btn-primary">Ver</a>
+            </div>
+            <div class="car-demo">
+                <img class="car-picture" src="<?php echo base_url ?>assets/img/bmw.jpg">
+                <div>
+                    <p><b>BMW</b></p>
+                    <h3>BMW Bravus M3</h3>
+                    <div class="caracteristicas">
+                        <p><b>Color:</b> Azul</p>
+                        <p><b>CV:</b> 250</p>
+                        <p><b>Asientos:</b> 5</p>
+                    </div>
+                    <p><b>Precio:</b> 250$</p>
+                    
+                </div>
+                <a href="#" class="btn btn-primary">Ver</a>
+            </div>
+            <div class="car-demo">
+                <img class="car-picture" src="<?php echo base_url ?>assets/img/bmw.jpg">
+                <div>
+                    <p><b>BMW</b></p>
+                    <h3>BMW Bravus M3</h3>
+                    <div class="caracteristicas">
+                        <p><b>Color:</b> Azul</p>
+                        <p><b>CV:</b> 250</p>
+                        <p><b>Asientos:</b> 5</p>
+                    </div>
+                    <p><b>Precio:</b> 250$</p>
+                    
+                </div>
+                <a href="#" class="btn btn-primary">Ver</a>
+            </div>
+            <div class="car-demo">
+                <img class="car-picture" src="<?php echo base_url ?>assets/img/bmw.jpg">
+                <div>
+                    <p><b>BMW</b></p>
+                    <h3>BMW Bravus M3</h3>
+                    <div class="caracteristicas">
+                        <p><b>Color:</b> Azul</p>
+                        <p><b>CV:</b> 250</p>
+                        <p><b>Asientos:</b> 5</p>
+                    </div>
+                    <p><b>Precio:</b> 250$</p>
+                    
+                </div>
+                <a href="#" class="btn btn-primary">Ver</a>
+            </div>
         </div>
+        <a class="btn btn-primary">See all</a>
     </div>
 
 </section>
