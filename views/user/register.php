@@ -10,41 +10,46 @@
         </div>
 
         <form class="form-auth" action="<?=base_url?>user/save" method="post" enctype="multipart/form-data">
+            <?php if(isset($_SESSION['register']) && $_SESSION['register'] == 'complete') : ?>
+                <strong class="alert_green">Registro completado correctamente</strong>
+            <?php elseif(isset($_SESSION['register']) && $_SESSION['register'] == 'failed'): ?>
+                <strong class="alert_red">Registro fallido</strong>
+            <?php endif; ?>
             <h3>Form</h3>
             
             <div class="form-columns">
                 <div>
                     <label>Name</label>
-                    <input type="text" name="name" placeholder="name">
+                    <input type="text" name="name" placeholder="name" required>
                 </div>
 
                 <div>
                     <label>Surname</label>
-                    <input type="text" name="surname" placeholder="surname">
+                    <input type="text" name="surname" placeholder="surname" required>
                 </div>
             </div>
 
             <div class="form-columns">
                 <div>
                     <label>Email</label>
-                    <input type="email" name="email" placeholder="email">
+                    <input type="email" name="email" placeholder="email" required>
                 </div>
 
                 <div>
                     <label>Date</label>
-                    <input type="date" name="date">
+                    <input type="date" name="date" required>
                 </div>
             </div>
 
             <div class="form-columns">
                 <div>
                     <label>Password</label>
-                    <input type="password" name="password">
+                    <input type="password" name="password" required>
                 </div>
 
                 <div>
                     <label>Confirm Password</label>
-                    <input type="password" name="repassword">
+                    <input type="password" name="repassword" required>
                 </div>
             </div>
 

@@ -42,6 +42,7 @@ class userController {
             } else {
                 $_SESSION['register'] = "failed";
             }
+            header("Location:".base_url.'user/register');
         }
     }
     public function login() {
