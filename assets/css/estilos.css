@@ -109,7 +109,6 @@ button {
     border-radius:50%;
     background-color: var(--primary-color);
 }
-
 .circle-profile {
     background-image: url(../img/users/pic-1.png);
     background-position: center;
@@ -117,6 +116,14 @@ button {
     border-radius:50%;
     height: 150px;
     width: 150px;
+    margin-top: 1rem;
+}
+.rectangle {
+    background-image: url(../img/users/pic-1.png);
+    background-position: center;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
     margin-top: 1rem;
 }
 /* NAVIGATION */
@@ -520,7 +527,7 @@ button {
     flex-direction: row;
     gap: 1rem;
 }
-.form-columns > div {
+.form-columns > div, .filter-form > div {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
@@ -595,6 +602,22 @@ button {
 .database-admin .bottom-row {
     max-width: none;
 }
+.database-admin .bottom-row {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: start;
+}
+.filter-data {
+    padding: 1.2rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    height: 100%;
+}
+.filter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
 .btn-update {
     background-color:green;
     color: var(--white);
@@ -602,6 +625,23 @@ button {
 .btn-delete {
     background-color:rgb(255, 64, 64);
     color: var(--white);
+}
+tbody {
+    width: 100%;
+    padding: 1rem;
+}
+th {
+    font-size: 1.4rem;
+}
+td {
+    font-size: 1.2rem;
+    text-align: center;
+}
+div.sort-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
 }
 /* FOOTER */
 .footer {

@@ -8,6 +8,49 @@
             <a>Services</a>
         </div>
         <div class="bottom-row">
+            <div class="filter-data">
+                <h3>Filter</h3>
+
+                <form class="filter-form">
+                    <div>
+                        <label>id</label>
+                        <input type="number" name="id_user">
+                    </div>
+
+                    <div>
+                        <label>email</label>
+                        <input type="email" name="email">
+                    </div>
+
+                    <div>
+                        <label>rol</label>
+                        <select>
+                            <option>User</option>
+                            <option>Rol</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>Sort by</label>
+                        <select>
+                            <option>Name</option>
+                            <option>Surname</option>
+                            <option>Creation</option>
+                            <option>Email</option>
+                        </select>
+                    </div>
+
+                    <div class="sort-options">
+                        <label>Asc</label>
+                        <input type="radio" name="sort" value="asc">
+
+                        <label>Desc</label>
+                        <input type="radio" name="sort" value="desc">
+                    </div>
+                    
+                    <button class="btn btn-primary">Submit</button>
+                </form>
+            </div>
             <table>
                 <tr>
                     <th>id_user</th>
@@ -29,7 +72,7 @@
                     <td>02/01/2023</td>
                     <td>User</td>
                     <td>johndoe@email.com</td>
-                    <td>image</td>
+                    <td><div class="rectangle"></div></td>
                     <td><button class="btn btn-update">Edit</button></td>
                     <td><button class="btn btn-delete">Delete</button></td>
                 </tr>
@@ -41,7 +84,7 @@
                     <td>02/01/2023</td>
                     <td>User</td>
                     <td>johndoe@email.com</td>
-                    <td>image</td>
+                    <td><div class="rectangle"></div></td>
                     <td><button class="btn btn-update">Edit</button></td>
                     <td><button class="btn btn-delete">Delete</button></td>
                 </tr>
@@ -53,7 +96,7 @@
                     <td>02/01/2023</td>
                     <td>User</td>
                     <td>johndoe@email.com</td>
-                    <td>image</td>
+                    <td><div class="rectangle"></div></td>
                     <td><button class="btn btn-update">Edit</button></td>
                     <td><button class="btn btn-delete">Delete</button></td>
                 </tr>
@@ -65,7 +108,7 @@
                     <td>02/01/2023</td>
                     <td>User</td>
                     <td>johndoe@email.com</td>
-                    <td>image</td>
+                    <td><div class="rectangle"></div></td>
                     <td><button class="btn btn-update">Edit</button></td>
                     <td><button class="btn btn-delete">Delete</button></td>
                 </tr>
@@ -77,7 +120,7 @@
                     <td>02/01/2023</td>
                     <td>User</td>
                     <td>johndoe@email.com</td>
-                    <td>image</td>
+                    <td><div class="rectangle"></div></td>
                     <td><button class="btn btn-update">Edit</button></td>
                     <td><button class="btn btn-delete">Delete</button></td>
                 </tr>
@@ -89,7 +132,7 @@
                     <td>02/01/2023</td>
                     <td>User</td>
                     <td>johndoe@email.com</td>
-                    <td>image</td>
+                    <td><div class="rectangle"></div></td>
                     <td><button class="btn btn-update">Edit</button></td>
                     <td><button class="btn btn-delete">Delete</button></td>
                 </tr>
