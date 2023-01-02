@@ -4,12 +4,16 @@
     <div class="database-admin">
         <div class="top-row">
             <a class="active-data">Users</a>
-            <a>Cars</a>
-            <a>Services</a>
+            <a href="<?php base_url ?>/user/admin&cars">Cars</a>
+            <a href="<?php base_url ?>/user/admin&services">Services</a>
         </div>
         <div class="bottom-row">
             <div class="filter-data">
-                <h3>Filter</h3>
+                <div>
+                    <h3>Filter</h3>
+                    <a href="<?php base_url ?>create_user">Create</a>
+                </div>
+                
 
                 <form class="filter-form">
                     <div>
@@ -64,6 +68,7 @@
                     <th>actions</th>
                 </tr>
 
+                <?php if($_SERVER['REQUEST_URI'] == "/user/admin") :?>
                 <tr>
                     <td>1</td>
                     <td>John</td>
@@ -136,6 +141,33 @@
                     <td><button class="btn btn-update">Edit</button></td>
                     <td><button class="btn btn-delete">Delete</button></td>
                 </tr>
+                <?php elseif($_SERVER['REQUEST_URI'] == "/user/admin&cars"): ?>
+                    <tr>
+                        <td>1</td>
+                        <td>BMW</td>
+                        <td>BMW</td>
+                        <td>12/02/1999</td>
+                        <td>02/01/2023</td>
+                        <td>User</td>
+                        <td>johndoe@email.com</td>
+                        <td><div class="rectangle"></div></td>
+                        <td><button class="btn btn-update">Edit</button></td>
+                        <td><button class="btn btn-delete">Delete</button></td>
+                    </tr>
+                <?php elseif($_SERVER['REQUEST_URI'] == "/user/admin&services"): ?>
+                    <tr>
+                        <td>1</td>
+                        <td>Services</td>
+                        <td>Services</td>
+                        <td>12/02/1999</td>
+                        <td>02/01/2023</td>
+                        <td>User</td>
+                        <td>johndoe@email.com</td>
+                        <td><div class="rectangle"></div></td>
+                        <td><button class="btn btn-update">Edit</button></td>
+                        <td><button class="btn btn-delete">Delete</button></td>
+                    </tr>
+                <?php endif; ?>
             </table>
         </div>
     </div>

@@ -19,6 +19,14 @@ class userController {
         // renderizar vista
         require_once './views/user/admin/index.php';
     }
+    public function create_user() {
+        // renderizar vista
+        require_once './views/user/admin/create_user.php';
+    }
+    public function create_car() {
+        // renderizar vista
+        require_once './views/user/admin/create_car.php';
+    }
     /* METHODS */
     public function save() {
         // renderizar vista

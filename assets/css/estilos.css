@@ -92,6 +92,14 @@ button.btn-primary {
     align-items: center;
     gap: 1rem;
 }
+.buttons .btn-primary {
+    color: var(--primary-color);
+    background-color: var(--white);
+}
+.buttons .btn-primary:hover {
+    color: black;
+    background-color: var(--white);
+}
 .circle {
     border-radius:50%;
     background-color: var(--white);
@@ -221,8 +229,8 @@ a.page  {
     height: 300px;
 }
 .banner-inicio {
-    padding-top: 0;
     padding: var(--separacion) 0;
+    color: var(--white);
 }
 
 /* OPTIONS */
@@ -617,6 +625,10 @@ a.page  {
 .table td{
     text-align: center;
 }
+tr:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
 .database-admin .top-row,.database-admin .bottom-row table {
     display: flex;
     flex-direction: row;
@@ -642,6 +654,10 @@ a.page  {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+}
+.filter-form button{
+    background-color: var(--white);
+    color: var(--primary-color);
 }
 .btn-update {
     background-color:green;
@@ -672,7 +688,7 @@ div.sort-options {
 /* FOOTER */
 .footer {
     background-color: var(--primary-color);
-    color: #000;
+    color: var(--white);
     display: grid;
     grid-template-rows: 80% 20%;
     gap: 1rem;
