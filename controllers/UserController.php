@@ -2,6 +2,7 @@
 require_once 'models/user.php';
 
 class userController {
+    /* VIEWS */
     public function index() {
         // renderizar vista
         require_once './views/user/index.php';
@@ -10,6 +11,15 @@ class userController {
         // renderizar vista
         require_once './views/user/register.php';
     }
+    public function login() {
+        // renderizar vista
+        require_once './views/user/login.php';
+    }
+    public function admin() {
+        // renderizar vista
+        require_once './views/user/admin/index.php';
+    }
+    /* METHODS */
     public function save() {
         // renderizar vista
         if(isset($_POST)) {
@@ -45,10 +55,6 @@ class userController {
             header("Location:".base_url.'user/register');
         }
     }
-    public function login() {
-        // renderizar vista
-        require_once './views/user/login.php';
-    }
     public function auth_login() {
         if(isset($_POST)) {
             $user = new User();
@@ -62,6 +68,8 @@ class userController {
 
                 if($identity->rol == 'admin') {
                     $_SESSION['admin'] = true;
+                    header("Location:".base_url."user/admin");
+                    return;
                 }
                 header("Location:".base_url."user/index");
             } else {
