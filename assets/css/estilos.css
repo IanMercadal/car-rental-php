@@ -482,22 +482,22 @@ button {
 .form-auth > * {
     margin: 1rem ;
 }
-.register {
+.register, .login {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     padding: var(--separacion);
     height: 500px;
     align-items: stretch;
 }
-.register .register-info {
+.register .register-info, .login .login-info {
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
 }
-.register .form-auth {
+.register .form-auth, .login .form-auth {
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
 }
-.register-info {
+.register-info, .login-info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -507,10 +507,10 @@ button {
 .register-info h3 {
     text-transform: uppercase;
 }
-.register-info > *{
+.register-info > *, .login-info > *{
     padding: 1rem;
 }
-.register-info a {
+.register-info a, .login-info a {
     margin: 1rem;
     width: 150px;
 }

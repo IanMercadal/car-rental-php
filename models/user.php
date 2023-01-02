@@ -170,4 +170,22 @@ class User {
         }
         return $result;
     }
+
+    public function login() {
+        $result = false;
+        $email = $this->email;
+        $password = $this->password;
+
+        $sql = "SELECT * FROM users WHERE email = '{$email}'";
+        $login = $this->db->query($sql);
+
+        if($login && $login->num_rows == 1) {
+            $user = $login->fetch_object();
+
+            if($password == $user->password) {
+                $result = $user;
+            }
+        }
+        return $result;
+    }
 }

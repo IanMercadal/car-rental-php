@@ -49,4 +49,24 @@ class userController {
         // renderizar vista
         require_once './views/user/login.php';
     }
+    public function auth_login() {
+        if(isset($_POST)) {
+            $user = new User();
+            $user->setEmail($_POST['email']);
+            $user->setPassword($_POST['password']);
+
+            $identity = $user->login();
+
+            if($identity && is_object($identity)) {
+                $_SESSION['identity'] = $identity;
+
+                if($identity->rol == 'admin') {
+                    $_SESSION['admin'] = true;
+                }
+                header("Location:".base_url."user/index");
+            } else {
+                $_SESSION['error_login'] = 'Identificación fallida';
+            }
+        }
+    }
 }

@@ -15,6 +15,7 @@
             <?php elseif(isset($_SESSION['register']) && $_SESSION['register'] == 'failed'): ?>
                 <strong class="alert_red">Registro fallido</strong>
             <?php endif; ?>
+            <?php Utils::deleteSession('register'); ?>
             <h3>Form</h3>
             
             <div class="form-columns">
