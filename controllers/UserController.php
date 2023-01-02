@@ -1,4 +1,5 @@
 <?php
+require_once 'models/user.php';
 
 class userController {
     public function index() {
@@ -11,7 +12,37 @@ class userController {
     }
     public function save() {
         // renderizar vista
-        echo "Controlador Usuarios, acción register";
+        if(isset($_POST)) {
+            $name = isset($_POST['name']) ? $_POST['name'] : false;
+            $surname = isset($_POST['surname']) ? $_POST['surname'] : false;
+            $email = isset($_POST['email']) ? $_POST['email'] : false;
+            $date = isset($_POST['date']) ? $_POST['date'] : false;
+            $password = isset($_POST['password']) ? $_POST['password'] : false;
+            $repassword = isset($_POST['repassword']) ? $_POST['repassword'] : false;
+
+            if($name && $surname && $email && $date && $password && $repassword) {
+                if($password === $repassword) {
+                    // Setters
+                    $user = new User();
+                    $user->setName($name);
+                    $user->setSurname($surname);
+                    $user->setEmail($email);
+                    $user->setDate($date);
+                    $user->setPassword($password);
+
+                    $save = $user->save();
+                    if($save){
+                        $_SESSION['register'] = "complete";
+                    }else{
+                        $_SESSION['register'] = "failed";
+                    }
+                } else {
+                    $_SESSION['register'] = "failed";
+                }
+            } else {
+                $_SESSION['register'] = "failed";
+            }
+        }
     }
     public function login() {
         // renderizar vista

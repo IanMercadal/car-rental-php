@@ -9,47 +9,52 @@
             <a class="btn btn-auth">Have an Account</a>
         </div>
 
-        <form class="form-auth">
+        <form class="form-auth" action="<?=base_url?>user/save" method="post" enctype="multipart/form-data">
             <h3>Form</h3>
             
             <div class="form-columns">
                 <div>
                     <label>Name</label>
-                    <input type="text" placeholder="name">
+                    <input type="text" name="name" placeholder="name">
                 </div>
 
                 <div>
                     <label>Surname</label>
-                    <input type="text" placeholder="surname">
+                    <input type="text" name="surname" placeholder="surname">
                 </div>
             </div>
 
             <div class="form-columns">
                 <div>
                     <label>Email</label>
-                    <input type="email" placeholder="email">
+                    <input type="email" name="email" placeholder="email">
                 </div>
 
                 <div>
                     <label>Date</label>
-                    <input type="date">
+                    <input type="date" name="date">
                 </div>
             </div>
 
             <div class="form-columns">
                 <div>
                     <label>Password</label>
-                    <input type="password">
+                    <input type="password" name="password">
                 </div>
 
                 <div>
                     <label>Confirm Password</label>
-                    <input type="password">
+                    <input type="password" name="repassword">
+                </div>
+            </div>
+
+            <div class="form-columns">
+                <div>
+                    <label>Image</label>
+                    <input type="file" name="image">
                 </div>
             </div>
             
-
-
             <button class="btn btn-primary">Register</button>
         </form>
     </div>
