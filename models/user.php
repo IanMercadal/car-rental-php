@@ -188,4 +188,9 @@ class User {
         }
         return $result;
     }
+
+	public function getAll() {
+        $users = $this->db->query("SELECT * FROM users ORDER BY id_user DESC");
+        return $users;
+    }
 }

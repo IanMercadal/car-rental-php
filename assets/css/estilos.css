@@ -650,6 +650,12 @@ tr:hover {
     background-color: var(--primary-color);
     height: 100%;
 }
+.filter-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 .filter-form {
     display: flex;
     flex-direction: column;

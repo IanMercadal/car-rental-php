@@ -1,5 +1,6 @@
 <?php
 require_once 'models/user.php';
+require_once 'models/car.php';
 
 class userController {
     /* VIEWS */
@@ -17,7 +18,17 @@ class userController {
     }
     public function admin() {
         // renderizar vista
+        $user = new User();
+        $users = $user->getAll();
+
         require_once './views/user/admin/index.php';
+    }
+    public function cars() {
+        // renderizar vista
+
+        $car = new Car();
+        $cars = $car->getAll();
+        require_once './views/user/admin/cars.php';
     }
     public function create_user() {
         // renderizar vista
@@ -29,7 +40,7 @@ class userController {
     }
     /* METHODS */
     public function save() {
-        // renderizar vista
+        
         if(isset($_POST)) {
             $name = isset($_POST['name']) ? $_POST['name'] : false;
             $surname = isset($_POST['surname']) ? $_POST['surname'] : false;

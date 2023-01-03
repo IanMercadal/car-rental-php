@@ -4,14 +4,12 @@
     <div class="database-admin">
         <div class="top-row">
             <a class="active-data">Users</a>
-            <a href="<?php base_url ?>/user/admin&cars">Cars</a>
-            <a href="<?php base_url ?>/user/admin&services">Services</a>
+            <a href="<?php base_url ?>cars">Cars</a>
         </div>
         <div class="bottom-row">
             <div class="filter-data">
                 <div>
                     <h3>Filter</h3>
-                    <a href="<?php base_url ?>create_user">Create</a>
                 </div>
                 
 
@@ -69,104 +67,35 @@
                 </tr>
 
                 <?php if($_SERVER['REQUEST_URI'] == "/user/admin") :?>
-                <tr>
-                    <td>1</td>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>12/02/1999</td>
-                    <td>02/01/2023</td>
-                    <td>User</td>
-                    <td>johndoe@email.com</td>
-                    <td><div class="rectangle"></div></td>
-                    <td><button class="btn btn-update">Edit</button></td>
-                    <td><button class="btn btn-delete">Delete</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>12/02/1999</td>
-                    <td>02/01/2023</td>
-                    <td>User</td>
-                    <td>johndoe@email.com</td>
-                    <td><div class="rectangle"></div></td>
-                    <td><button class="btn btn-update">Edit</button></td>
-                    <td><button class="btn btn-delete">Delete</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>12/02/1999</td>
-                    <td>02/01/2023</td>
-                    <td>User</td>
-                    <td>johndoe@email.com</td>
-                    <td><div class="rectangle"></div></td>
-                    <td><button class="btn btn-update">Edit</button></td>
-                    <td><button class="btn btn-delete">Delete</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>12/02/1999</td>
-                    <td>02/01/2023</td>
-                    <td>User</td>
-                    <td>johndoe@email.com</td>
-                    <td><div class="rectangle"></div></td>
-                    <td><button class="btn btn-update">Edit</button></td>
-                    <td><button class="btn btn-delete">Delete</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>12/02/1999</td>
-                    <td>02/01/2023</td>
-                    <td>User</td>
-                    <td>johndoe@email.com</td>
-                    <td><div class="rectangle"></div></td>
-                    <td><button class="btn btn-update">Edit</button></td>
-                    <td><button class="btn btn-delete">Delete</button></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>12/02/1999</td>
-                    <td>02/01/2023</td>
-                    <td>User</td>
-                    <td>johndoe@email.com</td>
-                    <td><div class="rectangle"></div></td>
-                    <td><button class="btn btn-update">Edit</button></td>
-                    <td><button class="btn btn-delete">Delete</button></td>
-                </tr>
+
+                    <?php while($user_row = $users->fetch_object()) : ?>
+                        <tr>
+                            <td><?=$user_row->id_user?></td>
+                            <td><?=$user_row->name?></td>
+                            <td><?=$user_row->surname?></td>
+                            <td><?=$user_row->date?></td>
+                            <td><?=$user_row->date_creation?></td>
+                            <td><?=$user_row->rol?></td>
+                            <td><?=$user_row->email?></td>
+                            <td><div class="rectangle"></div></td>
+                            <td><button class="btn btn-update">Edit</button></td>
+                            <td><button class="btn btn-delete">Delete</button></td>
+                        </tr>
+                    <?php endwhile ?>
+
                 <?php elseif($_SERVER['REQUEST_URI'] == "/user/admin&cars"): ?>
-                    <tr>
-                        <td>1</td>
-                        <td>BMW</td>
-                        <td>BMW</td>
-                        <td>12/02/1999</td>
-                        <td>02/01/2023</td>
-                        <td>User</td>
-                        <td>johndoe@email.com</td>
-                        <td><div class="rectangle"></div></td>
-                        <td><button class="btn btn-update">Edit</button></td>
-                        <td><button class="btn btn-delete">Delete</button></td>
-                    </tr>
-                <?php elseif($_SERVER['REQUEST_URI'] == "/user/admin&services"): ?>
-                    <tr>
-                        <td>1</td>
-                        <td>Services</td>
-                        <td>Services</td>
-                        <td>12/02/1999</td>
-                        <td>02/01/2023</td>
-                        <td>User</td>
-                        <td>johndoe@email.com</td>
-                        <td><div class="rectangle"></div></td>
-                        <td><button class="btn btn-update">Edit</button></td>
-                        <td><button class="btn btn-delete">Delete</button></td>
-                    </tr>
+                    <?php while($car_row = $cars->fetch_object()) : ?>
+                        <tr>
+                            <td><?=$car_row->id_car?></td>
+                            <td><?=$car_row->brand?></td>
+                            <td><?=$car_row->model?></td>
+                            <td><?=$car_row->age?></td>
+                            <td><?=$car_row->date_creation?></td>
+                            <td><div class="rectangle"></div></td>
+                            <td><button class="btn btn-update">Edit</button></td>
+                            <td><button class="btn btn-delete">Delete</button></td>
+                        </tr>
+                    <?php endwhile ?>
                 <?php endif; ?>
             </table>
         </div>
