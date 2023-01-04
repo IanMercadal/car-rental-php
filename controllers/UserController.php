@@ -1,6 +1,5 @@
 <?php
 require_once 'models/user.php';
-require_once 'models/car.php';
 
 class userController {
     /* VIEWS */
@@ -23,20 +22,9 @@ class userController {
 
         require_once './views/user/admin/index.php';
     }
-    public function cars() {
-        // renderizar vista
-
-        $car = new Car();
-        $cars = $car->getAll();
-        require_once './views/user/admin/cars.php';
-    }
     public function create_user() {
         // renderizar vista
         require_once './views/user/admin/create_user.php';
-    }
-    public function create_car() {
-        // renderizar vista
-        require_once './views/user/admin/create_car.php';
     }
     /* METHODS */
     public function save() {

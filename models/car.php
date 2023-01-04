@@ -1,6 +1,7 @@
 <?php
 
 class Car {
+    private $id;
     private $brand;
     private $model;
     private $price;
@@ -119,6 +120,23 @@ class Car {
 
         return $this;
     }
+    /**
+     * Get the value of id
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set the value of id
+     */
+    public function setId($id): self
+    {
+        $this->id = $id;
+
+        return $this;
+    }
 
     public function save() {
         $sql = "INSERT INTO cars VALUES(NULL, '{$this->getBrand()}', '{$this->getModel()}', {$this->getPrice()}, {$this->getAge()}, CURDATE() , '{$this->getImage()}', '{$this->getDescription()}', 3);";
@@ -133,6 +151,11 @@ class Car {
     public function getAll() {
         $users = $this->db->query("SELECT * FROM cars ORDER BY id_car DESC");
         return $users;
+    }
+
+    public function getOne() {
+        $car = $this->db->query("SELECT * FROM cars WHERE id_car = {$this->getId()}");
+        return $car->fetch_object();
     }
 }
 

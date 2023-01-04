@@ -57,4 +57,29 @@ class carController {
             header("Location:".base_url.'user/admin&cars');
         }
     }
+    public function admin() {
+        // renderizar vista
+        $car = new Car();
+        $cars = $car->getAll();
+        require_once './views/user/admin/cars.php';
+    }
+    public function create_car() {
+        // renderizar vista
+        require_once './views/user/admin/create_car.php';
+    }
+    public function edit_car() {
+        if(isset($_GET['id'])) {
+            $id = $_GET['id'];
+        
+            $car = new Car();
+            $car->setId($id);
+            $car = $car->getOne();
+
+            var_dump($car);
+        }
+
+    }
+    public function delete_car() {
+        echo "delete";
+    }
 }

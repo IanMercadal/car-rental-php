@@ -4,7 +4,7 @@
     <div class="database-admin">
         <div class="top-row">
             <a class="active-data">Users</a>
-            <a href="<?php base_url ?>cars">Cars</a>
+            <a href="http://localhost/car/admin">Cars</a>
         </div>
         <div class="bottom-row">
             <div class="filter-data">
