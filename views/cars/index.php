@@ -45,126 +45,23 @@
     <div id="index-cars">
         <h2 class="text-center">Popular cars</h2>
         <div class="car-list">
+            <?php while ($car = $cars->fetch_object()) :?>
             <div class="car-demo">
-                <img class="car-picture" src="<?php echo base_url ?>assets/img/bmw.jpg">
+                <img class="car-picture" src="<?php echo base_url ."uploads/images/". $car->image?>">
                 <div>
-                    <p><b>BMW</b></p>
-                    <h3>BMW Bravus M3</h3>
+                    <p><b><?php echo $car->brand ?></b></p>
+                    <h3><?php echo $car->brand . " " . $car->model ?></h3>
                     <div class="caracteristicas">
                         <p><b>Color:</b> Azul</p>
                         <p><b>CV:</b> 250</p>
                         <p><b>Asientos:</b> 5</p>
                     </div>
-                    <p><b>Precio:</b> 250$</p>
+                    <p><b>Precio:</b> <?php echo $car->price ?>$</p>
                     
                 </div>
-                <a href="#" class="btn btn-primary">Ver</a>
+                <a href="<?php echo base_url . "car/car&id_car=" . $car->id_car  ?>" class="btn btn-primary">Ver</a>
             </div>
-            <div class="car-demo">
-                <img class="car-picture" src="<?php echo base_url ?>assets/img/bmw.jpg">
-                <div>
-                    <p><b>BMW</b></p>
-                    <h3>BMW Bravus M3</h3>
-                    <div class="caracteristicas">
-                        <p><b>Color:</b> Azul</p>
-                        <p><b>CV:</b> 250</p>
-                        <p><b>Asientos:</b> 5</p>
-                    </div>
-                    <p><b>Precio:</b> 250$</p>
-                    
-                </div>
-                <a href="#" class="btn btn-primary">Ver</a>
-            </div>
-            <div class="car-demo">
-                <img class="car-picture" src="<?php echo base_url ?>assets/img/bmw.jpg">
-                <div>
-                    <p><b>BMW</b></p>
-                    <h3>BMW Bravus M3</h3>
-                    <div class="caracteristicas">
-                        <p><b>Color:</b> Azul</p>
-                        <p><b>CV:</b> 250</p>
-                        <p><b>Asientos:</b> 5</p>
-                    </div>
-                    <p><b>Precio:</b> 250$</p>
-                    
-                </div>
-                <a href="#" class="btn btn-primary">Ver</a>
-            </div>
-            <div class="car-demo">
-                <img class="car-picture" src="<?php echo base_url ?>assets/img/bmw.jpg">
-                <div>
-                    <p><b>BMW</b></p>
-                    <h3>BMW Bravus M3</h3>
-                    <div class="caracteristicas">
-                        <p><b>Color:</b> Azul</p>
-                        <p><b>CV:</b> 250</p>
-                        <p><b>Asientos:</b> 5</p>
-                    </div>
-                    <p><b>Precio:</b> 250$</p>
-                    
-                </div>
-                <a href="#" class="btn btn-primary">Ver</a>
-            </div>
-            <div class="car-demo">
-                <img class="car-picture" src="<?php echo base_url ?>assets/img/bmw.jpg">
-                <div>
-                    <p><b>BMW</b></p>
-                    <h3>BMW Bravus M3</h3>
-                    <div class="caracteristicas">
-                        <p><b>Color:</b> Azul</p>
-                        <p><b>CV:</b> 250</p>
-                        <p><b>Asientos:</b> 5</p>
-                    </div>
-                    <p><b>Precio:</b> 250$</p>
-                    
-                </div>
-                <a href="#" class="btn btn-primary">Ver</a>
-            </div>
-            <div class="car-demo">
-                <img class="car-picture" src="<?php echo base_url ?>assets/img/bmw.jpg">
-                <div>
-                    <p><b>BMW</b></p>
-                    <h3>BMW Bravus M3</h3>
-                    <div class="caracteristicas">
-                        <p><b>Color:</b> Azul</p>
-                        <p><b>CV:</b> 250</p>
-                        <p><b>Asientos:</b> 5</p>
-                    </div>
-                    <p><b>Precio:</b> 250$</p>
-                    
-                </div>
-                <a href="#" class="btn btn-primary">Ver</a>
-            </div>
-            <div class="car-demo">
-                <img class="car-picture" src="<?php echo base_url ?>assets/img/bmw.jpg">
-                <div>
-                    <p><b>BMW</b></p>
-                    <h3>BMW Bravus M3</h3>
-                    <div class="caracteristicas">
-                        <p><b>Color:</b> Azul</p>
-                        <p><b>CV:</b> 250</p>
-                        <p><b>Asientos:</b> 5</p>
-                    </div>
-                    <p><b>Precio:</b> 250$</p>
-                    
-                </div>
-                <a href="#" class="btn btn-primary">Ver</a>
-            </div>
-            <div class="car-demo">
-                <img class="car-picture" src="<?php echo base_url ?>assets/img/bmw.jpg">
-                <div>
-                    <p><b>BMW</b></p>
-                    <h3>BMW Bravus M3</h3>
-                    <div class="caracteristicas">
-                        <p><b>Color:</b> Azul</p>
-                        <p><b>CV:</b> 250</p>
-                        <p><b>Asientos:</b> 5</p>
-                    </div>
-                    <p><b>Precio:</b> 250$</p>
-                    
-                </div>
-                <a href="#" class="btn btn-primary">Ver</a>
-            </div>
+            <?php endwhile;?>
         </div>
         <a class="btn btn-primary">See all</a>
     </div>

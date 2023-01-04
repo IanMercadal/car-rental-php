@@ -3,7 +3,7 @@
 
     <div class="database-admin">
         <div class="top-row">
-            <a href="<?php base_url ?>admin">Users</a>
+            <a href="<?php echo base_url ?>user/admin">Users</a>
             <a class="active-data" href="<?php base_url ?>cars">Cars</a>
         </div>
         <div class="bottom-row">
@@ -72,7 +72,7 @@
                                 <?php if(!isset($car_row->image) || $car_row->image == "") :?>
                                     <div class="rectangle"></div>
                                     <?php else : ?>
-                                        <img width="100px" class="" src="<?=base_url?>uploads/images/<?=$car_row->image ?>" />
+                                        <img width="100px" src="<?=base_url?>uploads/images/<?=$car_row->image ?>" />
                                 <?php endif ?>
                             </td>
                             <td><a href="<?php base_url ?>edit_car&id=<?=$car_row->id_car?>" class="btn btn-update">Edit</a></td>

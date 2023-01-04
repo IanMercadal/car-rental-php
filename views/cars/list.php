@@ -43,74 +43,25 @@
         </div>
         <div class="big-car-list">
             <h3 class="text-center">Total results: 4</h3>
-            <div class="big-car">
-                <img class="car-picture" src="<?php echo base_url?>assets/img/bmw.jpg">
-                <div class="big-car-info">
-                    <h3>BMW Bravus M3</h3>
-                    <div class="big-car-info-stats">
-                        <p><b>Color:</b> Azul</p>
-                        <p><b>Año:</b> 2020</p>
-                        <p><b>CV:</b> 250</p>
-                        <p><b>Asientos:</b> 5</p>
-                        <p><b>Precio:</b> 250$</p>
+            <?php while ($car = $cars->fetch_object()) :?>
+                <div class="big-car">
+                    <img class="car-picture" src="<?php echo base_url ."uploads/images/". $car->image?>">
+                    <div class="big-car-info">
+                        <h3><?php echo $car->brand . " " . $car->model ?></h3>
+                        <div class="big-car-info-stats">
+                            <p><b>Color:</b> Azul</p>
+                            <p><b>Año:</b> 2020</p>
+                            <p><b>CV:</b> 250</p>
+                            <p><b>Asientos:</b> 5</p>
+                            <p><b>Precio:</b> <?php echo $car->price ?>$</p>
+                        </div>
+                        <div class="big-car-description">
+                            <p><?php echo $car->description ?></p>
+                        </div>
+                        <a href="<?php echo base_url . "car/car&id_car=" . $car->id_car  ?>" class="btn btn-primary">Ver</a>
                     </div>
-                    <div class="big-car-description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sunt reiciendis aliquid placeat unde officiis eum consectetur sit porro aspernatur suscipit, earum ducimus, provident maxime repellendus nobis veniam sint asperiores.</p>
-                    </div>
-                    <a class="btn btn-primary">Visitar</a>
                 </div>
-            </div>
-            <div class="big-car">
-                <img class="car-picture" src="<?php echo base_url?>assets/img/bmw.jpg">
-                <div class="big-car-info">
-                    <h3>BMW Bravus M3</h3>
-                    <div class="big-car-info-stats">
-                        <p><b>Color:</b> Azul</p>
-                        <p><b>Año:</b> 2020</p>
-                        <p><b>CV:</b> 250</p>
-                        <p><b>Asientos:</b> 5</p>
-                        <p><b>Precio:</b> 250$</p>
-                    </div>
-                    <div class="big-car-description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sunt reiciendis aliquid placeat unde officiis eum consectetur sit porro aspernatur suscipit, earum ducimus, provident maxime repellendus nobis veniam sint asperiores.</p>
-                    </div>
-                    <a class="btn btn-primary">Visitar</a>
-                </div>
-            </div>
-            <div class="big-car">
-                <img class="car-picture" src="<?php echo base_url?>assets/img/bmw.jpg">
-                <div class="big-car-info">
-                    <h3>BMW Bravus M3</h3>
-                    <div class="big-car-info-stats">
-                        <p><b>Color:</b> Azul</p>
-                        <p><b>Año:</b> 2020</p>
-                        <p><b>CV:</b> 250</p>
-                        <p><b>Asientos:</b> 5</p>
-                        <p><b>Precio:</b> 250$</p>
-                    </div>
-                    <div class="big-car-description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sunt reiciendis aliquid placeat unde officiis eum consectetur sit porro aspernatur suscipit, earum ducimus, provident maxime repellendus nobis veniam sint asperiores.</p>
-                    </div>
-                    <a class="btn btn-primary">Visitar</a>
-                </div>
-            </div>
-            <div class="big-car">
-                <img class="car-picture" src="<?php echo base_url?>assets/img/bmw.jpg">
-                <div class="big-car-info">
-                    <h3>BMW Bravus M3</h3>
-                    <div class="big-car-info-stats">
-                        <p><b>Color:</b> Azul</p>
-                        <p><b>Año:</b> 2020</p>
-                        <p><b>CV:</b> 250</p>
-                        <p><b>Asientos:</b> 5</p>
-                        <p><b>Precio:</b> 250$</p>
-                    </div>
-                    <div class="big-car-description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sunt reiciendis aliquid placeat unde officiis eum consectetur sit porro aspernatur suscipit, earum ducimus, provident maxime repellendus nobis veniam sint asperiores.</p>
-                    </div>
-                    <a class="btn btn-primary">Visitar</a>
-                </div>
-            </div>
+            <?php endwhile ;?>
         </div>
     </div>
 

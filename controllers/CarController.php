@@ -3,13 +3,36 @@
 require_once 'models/car.php';
 
 class carController {
+    /* VIEWS */
     public function index() {
+        $car = new Car();
+        $cars = $car->getAll(8);
         // renderizar vista
         require_once './views/cars/index.php';
     }
     public function list() {
+        $car = new Car();
+        $cars = $car->getAll();
         // renderizar vista
         require_once './views/cars/list.php';
+    }
+    public function admin() {
+        // renderizar vista
+        $car = new Car();
+        $cars = $car->getAll();
+        require_once './views/user/admin/cars.php';
+    }
+    public function car() {
+        if(isset($_GET['id_car'])) {
+            $id = $_GET['id_car'];
+
+            // Get car
+            $car = new Car();
+            $car->setId($id);
+            $car = $car->getOne();
+        }
+        // renderizar vista
+        require_once './views/cars/car.php';
     }
     public function save() {
         if(isset($_POST)) {
@@ -54,14 +77,8 @@ class carController {
                 } else {
                     $_SESSION['car'] = "failed";
                 }
-            header("Location:".base_url.'user/admin&cars');
+            header("Location:".base_url.'car/admin');
         }
-    }
-    public function admin() {
-        // renderizar vista
-        $car = new Car();
-        $cars = $car->getAll();
-        require_once './views/user/admin/cars.php';
     }
     public function create_car() {
         // renderizar vista
@@ -74,8 +91,6 @@ class carController {
             $car = new Car();
             $car->setId($id);
             $car = $car->getOne();
-
-            var_dump($car);
         }
 
     }
@@ -86,13 +101,13 @@ class carController {
             $car->setId($id);
 
             $delete = $car->delete();
-            var_dump($delete);
-            die();
-
+            
             if($delete) {
                 $_SESSION['delete'] = "complete";
+                require_once './views/user/admin/delete_car.php';
             } else {
                 $_SESSION['delete'] = "failed";
+                require_once './views/user/admin/delete_car.php';
             }
         } else {
             $_SESSION['delete'] = "complete";

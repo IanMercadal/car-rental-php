@@ -147,6 +147,13 @@ input {
     width: 100%;
 }
 
+.crud-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
 
 /* NAVIGATION */
 .header {
@@ -399,6 +406,49 @@ a.page  {
     font-size: 1.4rem;
 }
 
+/* CAR PROFILE */
+.car-profile {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.car-profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.car-profile-info img {
+    width: 100%;
+}
+.car-reservation {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+}
+.car-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+}
+.car-data-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.car-data-rating {
+    font-size: 60px;
+    font-family: var(--primary-font);
+}
+.car-data-rating.green {
+    color: green;
+}
+.car-reservation > * {
+    margin: 1rem;
+}
 /* SERVICES */
 .services-container {
     display: flex;
@@ -691,6 +741,7 @@ div.sort-options {
     align-items: center;
     justify-content: start;
 }
+
 /* FOOTER */
 .footer {
     background-color: var(--primary-color);

@@ -6,7 +6,7 @@
 
             <div class="site-gallery-columns">
                 <div class="left-column">
-                    <img class="site-picture" src="<?php echo base_url ?>assets/img/bmw.jpg">
+                    <img class="site-picture" src="<?php echo base_url ?>assets/img/services/local.jpg">
 
                     <div class="site-gallery-control">
                         <div class="circle-min active"></div>
@@ -29,25 +29,25 @@
 
             <div class="gallery">
                 <div>
-                    <img class="site-picture" src="<?php echo base_url ?>assets/img/bmw.jpg">
+                    <img class="site-picture" src="<?php echo base_url ?>assets/img/services/stats.jpg">
                     <h3>Lorem Ipsum dolor amet</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea eligendi id sunt, neque natus, adipisci laborum commodi et ab dolore temporibus minima facere, quo odio dignissimos porro iusto itaque velit!</p>
                 </div>
                 
                 <div>
-                    <img class="site-picture" src="<?php echo base_url ?>assets/img/bmw.jpg">
+                    <img class="site-picture" src="<?php echo base_url ?>assets/img/services/business.jpg">
                     <h3>Lorem Ipsum dolor amet</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea eligendi id sunt, neque natus, adipisci laborum commodi et ab dolore temporibus minima facere, quo odio dignissimos porro iusto itaque velit!</p>
                 </div>
 
                 <div>
-                    <img class="site-picture" src="<?php echo base_url ?>assets/img/bmw.jpg">
+                    <img class="site-picture" src="<?php echo base_url ?>assets/img/services/repair.jpg">
                     <h3>Lorem Ipsum dolor amet</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea eligendi id sunt, neque natus, adipisci laborum commodi et ab dolore temporibus minima facere, quo odio dignissimos porro iusto itaque velit!</p>
                 </div>
 
                 <div>
-                    <img class="site-picture" src="<?php echo base_url ?>assets/img/bmw.jpg">
+                    <img class="site-picture" src="<?php echo base_url ?>assets/img/services/cleaning.jpg">
                     <h3>Lorem Ipsum dolor amet</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea eligendi id sunt, neque natus, adipisci laborum commodi et ab dolore temporibus minima facere, quo odio dignissimos porro iusto itaque velit!</p>
                 </div>
