@@ -75,8 +75,8 @@
                                         <img width="100px" class="" src="<?=base_url?>uploads/images/<?=$car_row->image ?>" />
                                 <?php endif ?>
                             </td>
-                            <td><a href="<?php "http://localhost/" ?>edit_car&id=<?=$car_row->id_car?>" class="btn btn-update">Edit</a></td>
-                            <td><a href="<?php "http://localhost/" ?>delete_car&id=<?=$car_row->id_car?>" class="btn btn-delete">Delete</a></td>
+                            <td><a href="<?php base_url ?>edit_car&id=<?=$car_row->id_car?>" class="btn btn-update">Edit</a></td>
+                            <td><a href="<?php base_url ?>delete_car&id=<?=$car_row->id_car?>" class="btn btn-delete">Delete</a></td>
                         </tr>
                     <?php endwhile ?>
             </table>

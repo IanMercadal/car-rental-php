@@ -157,6 +157,17 @@ class Car {
         $car = $this->db->query("SELECT * FROM cars WHERE id_car = {$this->getId()}");
         return $car->fetch_object();
     }
+
+    public function delete() {
+        $sql = "DELETE FROM cars where id_car = {$this->id}";
+        $delete = $this->db->query($sql);
+
+        $result = false;
+        if($delete) {
+            $result = true;
+        }
+        return $result;
+    }
 }
 
 ?>

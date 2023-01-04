@@ -80,6 +80,22 @@ class carController {
 
     }
     public function delete_car() {
-        echo "delete";
+        if(isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $car = new Car();
+            $car->setId($id);
+
+            $delete = $car->delete();
+            var_dump($delete);
+            die();
+
+            if($delete) {
+                $_SESSION['delete'] = "complete";
+            } else {
+                $_SESSION['delete'] = "failed";
+            }
+        } else {
+            $_SESSION['delete'] = "complete";
+        }
     }
 }
