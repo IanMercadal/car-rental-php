@@ -1,5 +1,5 @@
 <section class="contenedor">
-    <h1 class="text-center"><?php echo($car->model) ?></h1>
+    <h1 class="text-center"><?php echo $car->brand . " " . $car->model ?></h1>
     <div class="car-profile">
         <div class="car-profile-info">
             <img src="<?php echo base_url ."uploads/images/". $car->image?>">

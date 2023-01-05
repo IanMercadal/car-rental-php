@@ -148,6 +148,22 @@ class Car {
         }
         return $result;
     }
+    public function edit() {
+        $sql = "UPDATE cars SET brand='{$this->getBrand()}', model='{$this->getModel()}', price={$this->getPrice()}, age={$this->getAge()}, description='{$this->getDescription()}' ";
+        if($this->getImage() != null) {
+            $sql .= ",image='{$this->getImage()}'";
+        }
+        
+        $sql .= " WHERE id_car={$this->id};";
+        
+        $save = $this->db->query($sql);
+
+        $result = false;
+        if($save) {
+            $result = true;
+        }
+        return $result;
+    }
     public function getAll($limite = 8) {
         if($limite) {
             $users = $this->db->query("SELECT * FROM cars ORDER BY id_car DESC LIMIT $limite");
@@ -156,7 +172,6 @@ class Car {
         }
         return $users;
     }
-
     public function getOne() {
         $car = $this->db->query("SELECT * FROM cars WHERE id_car = {$this->getId()}");
         return $car->fetch_object();

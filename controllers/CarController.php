@@ -67,7 +67,13 @@ class carController {
                         }
                     }
 
-                    $save = $car->save();
+                    if(isset($_GET['id'])) {
+                        $id = $_GET['id'];
+                        $car->setId($id);
+                        $save = $car->edit();
+                    } else {
+                        $save = $car->save();
+                    }
 
                     if($save){
                         $_SESSION['car'] = "complete";
@@ -77,14 +83,14 @@ class carController {
                 } else {
                     $_SESSION['car'] = "failed";
                 }
-            header("Location:".base_url.'car/admin');
+            require_once './views/user/admin/query_result.php';
         }
     }
-    public function create_car() {
+    public function create() {
         // renderizar vista
         require_once './views/user/admin/create_car.php';
     }
-    public function edit_car() {
+    public function edit() {
         if(isset($_GET['id'])) {
             $id = $_GET['id'];
         
@@ -92,9 +98,9 @@ class carController {
             $car->setId($id);
             $car = $car->getOne();
         }
-
+        require_once './views/user/admin/edit_car.php';
     }
-    public function delete_car() {
+    public function delete() {
         if(isset($_GET['id'])) {
             $id = $_GET['id'];
             $car = new Car();
@@ -104,10 +110,10 @@ class carController {
             
             if($delete) {
                 $_SESSION['delete'] = "complete";
-                require_once './views/user/admin/delete_car.php';
+                require_once './views/user/admin/query_result.php';
             } else {
                 $_SESSION['delete'] = "failed";
-                require_once './views/user/admin/delete_car.php';
+                require_once './views/user/admin/query_result.php';
             }
         } else {
             $_SESSION['delete'] = "complete";

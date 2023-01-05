@@ -10,7 +10,7 @@
             <div class="filter-data">
                 <div class="filter-header">
                     <h3>Filter</h3>
-                    <a class="btn btn-primary" href="<?php base_url ?>create_car">Create</a>
+                    <a class="btn btn-primary" href="<?php base_url ?>create">Create</a>
                 </div>
                 
 
@@ -75,8 +75,8 @@
                                         <img width="100px" src="<?=base_url?>uploads/images/<?=$car_row->image ?>" />
                                 <?php endif ?>
                             </td>
-                            <td><a href="<?php base_url ?>edit_car&id=<?=$car_row->id_car?>" class="btn btn-update">Edit</a></td>
-                            <td><a href="<?php base_url ?>delete_car&id=<?=$car_row->id_car?>" class="btn btn-delete">Delete</a></td>
+                            <td><a href="<?php base_url ?>edit&id=<?=$car_row->id_car?>" class="btn btn-update">Edit</a></td>
+                            <td><a href="<?php base_url ?>delete&id=<?=$car_row->id_car?>" class="btn btn-delete">Delete</a></td>
                         </tr>
                     <?php endwhile ?>
             </table>

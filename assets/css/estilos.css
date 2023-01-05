@@ -1,6 +1,7 @@
 :root {
     /* --primary-color: #0BA5BE; */
-    --primary-color: #e7a946;
+    /* --primary-color: #e7a946; */
+    --primary-color: #21304D;
     --secondary-color: #e3e3e3;
     --white: #fff;
 
@@ -143,7 +144,7 @@ label {
 }
 input {
     border: none;
-    height: 20px;
+    height: 30px;
     width: 100%;
 }
 
@@ -314,8 +315,9 @@ a.page  {
     margin: 0.8rem;
 }
 .car-demo .car-picture {
-    width: 100%;
-    max-width: 295px;
+    /* width: 100%;
+    max-width: 295px; */
+    height: 150px;
     padding: 0;
 }
 .caracteristicas {
@@ -423,6 +425,7 @@ a.page  {
     display: flex;
     flex-direction: column;
     background-color: var(--primary-color);
+    color: var(--white);
 }
 .car-data {
     display: flex;
@@ -499,14 +502,10 @@ a.page  {
     flex-direction: row;
     gap: 1rem;
 }
-.site-picture {
-    width: 100%;
-    max-width: 600px;
-}
 .gallery {
     display: grid;
     gap: 1rem;
-    grid-auto-rows: 29rem;
+    /* grid-auto-rows: 29rem; */
     grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
     padding: var(--separacion) 0;
     justify-items: center;
@@ -583,6 +582,7 @@ a.page  {
 .register .register-info, .login .login-info {
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
+    color: var(--white);
 }
 .register .form-auth, .login .form-auth {
     border-top-right-radius: 1rem;
@@ -741,7 +741,31 @@ div.sort-options {
     align-items: center;
     justify-content: start;
 }
+.form-car > * {
+    padding: 1rem;
+}
+.form-car {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
 
+.form-car-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem;
+    gap: 1rem
+}
+.form-car-labels {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.form-car-labels textarea {
+    resize: none;
+    width: 200px;
+    height: 150px;
+}
 /* FOOTER */
 .footer {
     background-color: var(--primary-color);
@@ -796,6 +820,13 @@ div.sort-options {
         display: flex;
         flex-direction: column;
     }
+    .testimonials-cards {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .testimonial-card {
+        width: 100%;
+    }
 }
 /* max-width: 834 */
 @media (max-width: 834px) {
@@ -844,6 +875,14 @@ div.sort-options {
         display: grid;
         grid-template-rows: repeat(2,1fr);
         grid-template-columns: none;
+    }
+    .testimonials-cards {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .car-profile {
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2,1fr);
     }
 }
 /* min-width: 768px */
