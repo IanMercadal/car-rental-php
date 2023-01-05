@@ -6,7 +6,7 @@
 
             <div class="site-gallery-columns">
                 <div class="left-column">
-                    <img class="site-picture" src="<?php echo base_url ?>assets/img/services/local.jpg">
+                    <img class="site-picture-active" src="<?php echo base_url ?>assets/img/services/local.jpg">
 
                     <div class="site-gallery-control">
                         <div class="circle-min active"></div>

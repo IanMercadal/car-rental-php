@@ -4,15 +4,10 @@
         <div class="filtros">
             <!-- Poner box-shadow al div filtros -->
             <div class="search-box">
-                <form class="car-form" method="post">
+                <form class="car-form" method="POST" action="<?= base_url?>car/list">
                     <div class="input-box">
                         <label>Brand</label>
-                        <select>
-                            <option selected>-- Select --</option>
-                            <option>BMW</option>
-                            <option>BMW</option>
-                            <option>BMW</option>
-                        </select>
+                        <input type="text">
                     </div>
                     <div class="input-box">
                         <label>Year</label>
@@ -42,18 +37,16 @@
             </div>
         </div>
         <div class="big-car-list">
-            <h3 class="text-center">Total results: 4</h3>
             <?php while ($car = $cars->fetch_object()) :?>
                 <div class="big-car">
                     <img class="car-picture" src="<?php echo base_url ."uploads/images/". $car->image?>">
                     <div class="big-car-info">
                         <h3><?php echo $car->brand . " " . $car->model ?></h3>
                         <div class="big-car-info-stats">
-                            <p><b>Color:</b> Azul</p>
-                            <p><b>Año:</b> 2020</p>
-                            <p><b>CV:</b> 250</p>
-                            <p><b>Asientos:</b> 5</p>
-                            <p><b>Precio:</b> <?php echo $car->price ?>$</p>
+                            <p><b>Date:</b> 2020</p>
+                            <p><b>Buy:</b> <?php echo $car->price ?>$</p>
+                            <p><b>Rent:</b> <?php echo $car->price_rent ?>$</p>
+                            <p><b>Rating:</b> 4'5/5</p>
                         </div>
                         <div class="big-car-description">
                             <p><?php echo $car->description ?></p>

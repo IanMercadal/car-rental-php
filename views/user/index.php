@@ -3,17 +3,17 @@
 
     <div class="user-info">
         <div class="top-row">
-            <a class="active-data">Data</a>
-            <a>Testimonials</a>
-            <a>Pedidos</a>
+            <a href="<?php base_url ?>index" class="active-data">Data</a>
+            <a href="<?php base_url ?>testimonials">Testimonials</a>
+            <a href="<?php base_url ?>orders">Orders</a>
         </div>
         <div class="bottom-row">
             <div class="circle-profile"></div>
             <div class="user">
-                <p><b>Nombre: </b>John Doe</p>
-                <p><b>Edad: </b>Age</p>
-                <p><b>Email: </b>email@email.com</p>
-                <p><b>Registered: </b>12/12/2022</p>
+                <p><b>Name: </b><?php echo $_SESSION["identity"]->name . " " . $_SESSION["identity"]->surname?></p>
+                <p><b>Date: </b><?php echo $_SESSION["identity"]->date ?></p>
+                <p><b>Email: </b><?php echo $_SESSION["identity"]->email ?></p>
+                <p><b>Registered: </b><?php echo $_SESSION["identity"]->date_creation ?></p>
             </div>
         </div>
     </div>

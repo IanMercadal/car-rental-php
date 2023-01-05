@@ -41,8 +41,8 @@
         </div>
 
         <div class="car-reservation">
+            <?php if(isset($_SESSION["identity"])) : ?>
             <form>
-
                 <div>
                     <label>Service</label>
                     <select name="service" id="service">
@@ -56,22 +56,23 @@
                     <input type="date" name="date">
                 </div>
 
-                <div>
-                    <label>Stater Hour</label>
-                    <input type="time" name="starter_hour">
-                </div>
-
-                <div>
-                    <label>End Hour</label>
-                    <input type="time" name="starter_hour">
-                </div>
-
                 <input type="hidden" name="service" value="rent">
 
                 <!-- <input type="hidden" name="id_user" value="<?php $_SESSION["id_user"] ?>"> -->
 
                 <button class="btn btn-primary" type="submit">Submit</button>
             </form>
+            <?php else : ?>
+                <h3>Need to login or register</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-check" width="80" height="80" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                    <path d="M16 11l2 2l4 -4" />
+                </svg>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam saepe dolorem, officia ipsa reiciendis debitis distinctio obcaecati molestias tempore! Eaque id ratione assumenda adipisci aut veniam! Consectetur aperiam explicabo magnam?</p>
+                <a class="btn btn-primary"href="<?php echo base_url?>user/login">Login</a>
+                <?php endif?>
         </div>
     </div>
 </section>

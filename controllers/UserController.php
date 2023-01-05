@@ -26,6 +26,14 @@ class userController {
         // renderizar vista
         require_once './views/user/admin/create_user.php';
     }
+    public function testimonials() {
+        // renderizar vista
+        require_once './views/user/testimonials.php';
+    }
+    public function orders() {
+        // renderizar vista
+        require_once './views/user/orders.php';
+    }
     /* METHODS */
     public function save() {
         
@@ -83,5 +91,13 @@ class userController {
                 $_SESSION['error_login'] = 'Identificación fallida';
             }
         }
+    }
+    public function logout() {
+        if(isset($_SESSION["identity"])) {
+            $_SESSION["identity"] = null;
+            unset($_SESSION["identity"]);
+        }
+        // renderizar vista
+        header("Location:".base_url."user/login");
     }
 }
