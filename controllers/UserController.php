@@ -26,10 +26,6 @@ class userController {
         // renderizar vista
         require_once './views/user/admin/create_user.php';
     }
-    public function testimonials() {
-        // renderizar vista
-        require_once './views/user/testimonials.php';
-    }
     /* METHODS */
     public function save() {
         

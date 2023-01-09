@@ -37,7 +37,9 @@
                     <div>
                         <div class="form-row">
                             <label>Surname</label>
-                            <p class="error">Error with the surname</p>
+                            <?php if (isset($_POST["surname"]) && $_POST["surname"] === false) {
+                                echo '<p class="error">Error with the surname</p>';
+                            } ?>
                         </div>
                         <input type="text" name="surname" placeholder="surname" required>
                     </div>
@@ -47,7 +49,9 @@
                     <div class="form-column">
                         <div class="form-row">
                             <label>Email</label>
-                            <p class="error">Error with the email</p>
+                            <?php if (isset($_POST["email"]) && $_POST["email"] === false) {
+                                echo '<p class="error">Error with the email</p>';
+                            } ?>
                         </div>
                         <input type="email" name="email" placeholder="email" required>
                     </div>
@@ -55,7 +59,9 @@
                     <div class="form-column">
                         <div class="form-row">
                             <label>Date</label>
-                            <p class="error">Error with the date</p>
+                            <?php if (isset($_POST["date"]) && $_POST["date"] === false) {
+                                echo '<p class="error">Error with the date</p>';
+                            } ?>
                         </div>
                         <input type="date" name="date" required>
                     </div>
@@ -65,7 +71,9 @@
                     <div class="form-column">
                         <div class="form-row">
                             <label>Password</label>
-                            <p class="error">Error with the password</p>
+                            <?php if (isset($_POST["password"]) && $_POST["password"] === false) {
+                                echo '<p class="error">Error with the password</p>';
+                            } ?>
                         </div>
                         <input type="password" name="password" required>
                     </div>
@@ -73,7 +81,9 @@
                     <div>
                         <div class="form-row">
                             <label>Confirm Password</label>
-                            <p class="error">Error with the repassword</p>
+                            <?php if (isset($_POST["password"]) && $_POST["password"] === false) {
+                                echo '<p class="error">Error with the repassword</p>';
+                            } ?>
                         </div>
                         <input type="password" name="repassword" required>
                     </div>
@@ -83,7 +93,9 @@
                     <div class="form-column">
                         <div>
                             <label>Image</label>
-                            <p class="error">Error with the image</p>
+                            <?php if (isset($_POST["image"]) && $_POST["image"] === false) {
+                                echo '<p class="error">Error with the image</p>';
+                            } ?>
                         </div>
                         <input type="file" name="image">
                     </div>

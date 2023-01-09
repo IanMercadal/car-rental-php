@@ -8,6 +8,7 @@ class Car {
     private $age;
     private $image;
     private $description;
+    private $state;
 	private $db;
 
     public function __construct() {
@@ -138,6 +139,24 @@ class Car {
         return $this;
     }
 
+        /**
+     * Get the value of state
+     */
+    public function getState()
+    {
+        return $this->state;
+    }
+
+    /**
+     * Set the value of state
+     */
+    public function setState($state): self
+    {
+        $this->state = $state;
+
+        return $this;
+    }
+
     public function save() {
         $sql = "INSERT INTO cars VALUES(NULL, '{$this->getBrand()}', '{$this->getModel()}', {$this->getPrice()}, {$this->getAge()}, CURDATE() , '{$this->getImage()}', '{$this->getDescription()}', 3);";
         $save = $this->db->query($sql);
@@ -166,9 +185,9 @@ class Car {
     }
     public function getAll($limite = 8) {
         if($limite) {
-            $users = $this->db->query("SELECT * FROM cars ORDER BY id_car DESC LIMIT $limite");
+            $users = $this->db->query("SELECT * FROM cars where state = 1 ORDER BY id_car DESC LIMIT $limite");
         } else {
-            $users = $this->db->query("SELECT * FROM cars ORDER BY id_car DESC");
+            $users = $this->db->query("SELECT * FROM cars where state = 1 ORDER BY id_car DESC");
         }
         return $users;
     }
@@ -187,6 +206,7 @@ class Car {
         }
         return $result;
     }
+
 }
 
 ?>

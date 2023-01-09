@@ -6,6 +6,8 @@ class Order {
     private $id_car;
     private $date;
     private $service;
+    private $price;
+    private $price_rent;
     private $db;
 
     public function __construct() {
@@ -102,10 +104,63 @@ class Order {
         return $this;
     }
 
-    public function save() {
-        $sql = "INSERT INTO orders VALUES(NULL, '{$this->getIdUser()}', '{$this->getIdCar()}', '{$this->getDate()}', '{$this->getService()}');";
+    /**
+     * Get the value of price
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set the value of price
+     */
+    public function setPrice($price): self
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of price_rent
+     */
+    public function getPriceRent()
+    {
+        return $this->price_rent;
+    }
+
+    /**
+     * Set the value of price_rent
+     */
+    public function setPriceRent($price_rent): self
+    {
+        $this->price_rent = $price_rent;
+
+        return $this;
+    }
+
+    public function save($option) {
+        if($option === "buy") {
+            $sql = "INSERT INTO orders VALUES(NULL, '{$this->getIdUser()}', '{$this->getIdCar()}', '{$this->getDate()}', '{$this->getService()}', {$this->getPrice()});";
+        } else {
+            $sql = "INSERT INTO orders VALUES(NULL, '{$this->getIdUser()}', '{$this->getIdCar()}', '{$this->getDate()}', '{$this->getService()}', {$this->getPriceRent()});";
+        }
+        
         $save = $this->db->query($sql);
 
+        if($save && $option === "buy") {
+            $update_car_sql = "UPDATE cars SET state=0 where id_car = '{$this->getIdCar()}'";
+            $update = $this->db->query($update_car_sql);
+
+            $result = false;
+            if($save && $update) {
+                $result = true;
+            }
+            return $result;
+        }
+
+        
         $result = false;
         if($save) {
             $result = true;

@@ -1,6 +1,4 @@
 :root {
-    /* --primary-color: #0BA5BE; */
-    /* --primary-color: #e7a946; */
     --primary-color: #21304D;
     --secondary-color: #e3e3e3;
     --white: #fff;
@@ -142,7 +140,7 @@ button.btn-primary {
 label {
     font-size: 1.4rem;
 }
-input {
+input, select {
     border: none;
     height: 30px;
     width: 100%;
@@ -345,7 +343,7 @@ a.page  {
     width: 100%;
     max-width: 250px;
 }
-.big-car-list {
+/* .big-car-list {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -360,6 +358,27 @@ a.page  {
     background-color: var(--secondary-color);
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} */
+
+.big-car-list {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    padding: var(--separacion) 0;
+    padding-top: 0;
+}
+.big-car {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.big-car-picture {
+    width: 100%;
+    height: 175px;
 }
 .big-car:hover, .car-demo:hover {
     transform: scale(1.02);
@@ -454,14 +473,22 @@ a.page  {
     margin-left: auto;
     margin-right: auto;
 }
-.car-data {
+.car-reservation-form {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+}
+.car-data {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     width: 100%;
     background-color: var(--secondary-color);
     padding: 1rem;
+}
+.car-data-parent {
+    display: flex;
+    flex-direction: column;
+    height: auto;
 }
 .car-data-icon {
     display: flex;
@@ -469,13 +496,7 @@ a.page  {
     align-items: center;
     justify-content: center;
 }
-.car-data-rating {
-    font-size: 60px;
-    font-family: var(--primary-font);
-}
-.car-data-rating.green {
-    color: green;
-}
+
 .car-reservation > * {
     margin: 1rem;
 }
@@ -887,6 +908,14 @@ div.sort-options {
         gap: 1.2rem;
         justify-content: center;
     }
+    .big-car-list {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .big-car-picture {
+        width: 300px;
+    }
+
 }
 /* max-width: 1024 */
 @media (max-width: 1024px) {
@@ -928,6 +957,13 @@ div.sort-options {
         justify-content: center;
         align-items: center;
     }
+    .car-data {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+
+    }
     .car-form {
         display: flex;
         flex-direction: column;
@@ -957,6 +993,7 @@ div.sort-options {
     .car-profile {
         grid-template-columns: repeat(1,1fr);
         grid-template-rows: repeat(2,1fr);
+        padding: 1rem;
     }
     .register, .login {
         display: grid;
@@ -968,6 +1005,12 @@ div.sort-options {
     .register-info {
         border-bottom-left-radius: 0% !important;
         border-top-right-radius: 1rem;
+    }
+}
+@media (max-width: 685px) {
+    .big-car-list {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
     }
 }
 /* min-width: 768px */

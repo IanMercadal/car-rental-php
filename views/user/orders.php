@@ -4,7 +4,6 @@
     <div class="user-info">
         <div class="top-row">
             <a href="<?php echo base_url ?>user/index">Data</a>
-            <a href="<?php echo base_url ?>testimonial/user">Testimonials</a>
             <a class="active-data" href="<?php base_url ?>orders">Orders</a>
         </div>
         <div class="bottom-row">

@@ -53,7 +53,6 @@
                     <h3><?php echo $car->brand . " " . $car->model ?></h3>
                     <div class="caracteristicas">
                         <p><b>Age:</b> <?php echo $car->age ?></p>
-                        <p><b>Rating:</b> 4'5</p>
                         <p><b>Rent:</b> <?php echo $car->price_rent ?></p>
                     </div>
                     <p><b>Price:</b> <?php echo $car->price ?>$</p>
