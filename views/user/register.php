@@ -18,45 +18,66 @@
             <?php Utils::deleteSession('register'); ?>
             <h3>Form</h3>
             
-            <div class="form-columns">
-                <div>
-                    <label>Name</label>
+            <div class="form-columns-register">
+                <div class="form-column">
+                    <div class="form-row">
+                        <label>Name</label>
+                        <p class="error">Error with the name</p>
+                    </div>
                     <input type="text" name="name" placeholder="name" required>
                 </div>
 
                 <div>
-                    <label>Surname</label>
+                    <div class="form-row">
+                        <label>Surname</label>
+                        <p class="error">Error with the surname</p>
+                    </div>
                     <input type="text" name="surname" placeholder="surname" required>
                 </div>
             </div>
 
-            <div class="form-columns">
-                <div>
-                    <label>Email</label>
+            <div class="form-columns-register">
+                <div class="form-column">
+                    <div class="form-row">
+                        <label>Email</label>
+                        <p class="error">Error with the email</p>
+                    </div>
                     <input type="email" name="email" placeholder="email" required>
                 </div>
 
-                <div>
-                    <label>Date</label>
+                <div class="form-column">
+                    <div class="form-row">
+                        <label>Date</label>
+                        <p class="error">Error with the date</p>
+                    </div>
                     <input type="date" name="date" required>
                 </div>
             </div>
 
-            <div class="form-columns">
-                <div>
-                    <label>Password</label>
+            <div class="form-columns-register">
+                <div class="form-column">
+                    <div class="form-row">                        
+                        <label>Password</label>
+                        <p class="error">Error with the password</p>
+                    </div>
                     <input type="password" name="password" required>
                 </div>
 
                 <div>
-                    <label>Confirm Password</label>
+                    <div class="form-row">
+                        <label>Confirm Password</label>
+                        <p class="error">Error with the repassword</p>
+                    </div>
                     <input type="password" name="repassword" required>
                 </div>
             </div>
 
-            <div class="form-columns">
-                <div>
-                    <label>Image</label>
+            <div class="form-columns-register">
+                <div class="form-column">
+                    <div>
+                        <label>Image</label>
+                        <p class="error">Error with the image</p>
+                    </div>
                     <input type="file" name="image">
                 </div>
             </div>

@@ -43,7 +43,7 @@
                     <div class="big-car-info">
                         <h3><?php echo $car->brand . " " . $car->model ?></h3>
                         <div class="big-car-info-stats">
-                            <p><b>Date:</b> 2020</p>
+                            <p><b>Date:</b> <?php echo $car->age ?></p>
                             <p><b>Buy:</b> <?php echo $car->price ?>$</p>
                             <p><b>Rent:</b> <?php echo $car->price_rent ?>$</p>
                             <p><b>Rating:</b> 4'5/5</p>

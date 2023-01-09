@@ -52,11 +52,11 @@
                     <p><b><?php echo $car->brand ?></b></p>
                     <h3><?php echo $car->brand . " " . $car->model ?></h3>
                     <div class="caracteristicas">
-                        <p><b>Color:</b> Azul</p>
-                        <p><b>CV:</b> 250</p>
-                        <p><b>Asientos:</b> 5</p>
+                        <p><b>Age:</b> <?php echo $car->age ?></p>
+                        <p><b>Rating:</b> 4'5</p>
+                        <p><b>Rent:</b> <?php echo $car->price_rent ?></p>
                     </div>
-                    <p><b>Precio:</b> <?php echo $car->price ?>$</p>
+                    <p><b>Price:</b> <?php echo $car->price ?>$</p>
                     
                 </div>
                 <a href="<?php echo base_url . "car/car&id_car=" . $car->id_car  ?>" class="btn btn-primary">Ver</a>
