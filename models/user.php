@@ -61,7 +61,7 @@ class User {
 	 */
 	public function getPassword()
 	{
-		return $this->password;
+		return password_hash($this->db->real_escape_string($this->password), PASSWORD_BCRYPT, ['cost' => 4]);
 	}
 
 	/**
@@ -182,7 +182,10 @@ class User {
         if($login && $login->num_rows == 1) {
             $user = $login->fetch_object();
 
-            if($password == $user->password) {
+			// Verificar contraseña
+			$verify = password_verify($password, $user->password);
+
+            if($verify) {
                 $result = $user;
             }
         }

@@ -640,7 +640,7 @@ a.page  {
     background-color: var(--primary-color);
     justify-content: flex-start;
 }
-.register-info h3 {
+.register-info h3, .login-info h3 {
     text-transform: uppercase;
 }
 .register-info > *, .login-info > *{
@@ -672,6 +672,13 @@ a.page  {
 .form-email {
     display: flex;
     flex-direction: column;
+}
+.form-succesful {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: normal;
 }
 .btn-auth {
     background-color: var(--white);

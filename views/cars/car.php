@@ -42,26 +42,26 @@
 
         <div class="car-reservation">
             <?php if(isset($_SESSION["identity"])) : ?>
-            <form>
-                <div>
-                    <label>Service</label>
-                    <select name="service" id="service">
-                        <option>Rent</option>
-                        <option>Buy</option>
-                    </select>
-                </div>
+                <form action="<?php echo base_url ?>order/save" method="post">
+                    <h3>Get car</h3>
+                    <div class="form-column">
+                        <label>Service</label>
+                        <select name="service" id="service">
+                            <option value="rent" >Rent</option>
+                            <option value="buy">Buy</option>
+                        </select>
+                    </div>
 
-                <div>
-                    <label>Date</label>
-                    <input type="date" name="date">
-                </div>
+                    <div class="form-column">
+                        <label>Date</label>
+                        <input type="date" name="date">
+                    </div>
 
-                <input type="hidden" name="service" value="rent">
+                    <input type="hidden" name="id_user" value='<?php echo $_SESSION["identity"]->id_user ?>'>
+                    <input type="hidden" name="id_car" value="<?php echo $_GET["id_car"] ?>">
 
-                <!-- <input type="hidden" name="id_user" value="<?php $_SESSION["id_user"] ?>"> -->
-
-                <button class="btn btn-primary" type="submit">Submit</button>
-            </form>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </form>
             <?php else : ?>
                 <h3>Need to login or register</h3>
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-check" width="80" height="80" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">

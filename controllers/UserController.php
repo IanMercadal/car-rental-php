@@ -90,6 +90,7 @@ class userController {
             } else {
                 $_SESSION['error_login'] = 'Identificación fallida';
             }
+            header("Location:".base_url.'user/login');
         }
     }
     public function logout() {
