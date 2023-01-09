@@ -112,6 +112,11 @@ class Order {
         }
         return $result;
     }
+    public function getAllFromUser() {
+        $id_user = $_SESSION['identity']->id_user;
+        $orders = $this->db->query("SELECT * FROM orders where id_user = '{$id_user}' ORDER BY id_order DESC");
+        return $orders;
+    }
 }
 
 ?>

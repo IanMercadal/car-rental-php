@@ -31,6 +31,12 @@ class orderController {
         }
         header("Location:".base_url.'car/car&id_car=' . $id_car );
     }
+    public function user() {
+        $order = new Order();
+        $orders = $order->getAllFromUser();
+
+        require_once './views/user/orders.php';
+    }
 }
 
 ?>

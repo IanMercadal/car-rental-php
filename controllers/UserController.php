@@ -30,10 +30,6 @@ class userController {
         // renderizar vista
         require_once './views/user/testimonials.php';
     }
-    public function orders() {
-        // renderizar vista
-        require_once './views/user/orders.php';
-    }
     /* METHODS */
     public function save() {
         

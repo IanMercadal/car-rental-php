@@ -827,6 +827,19 @@ div.sort-options {
     width: 200px;
     height: 150px;
 }
+
+/* ORDERS */
+.user-order {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    padding: 1rem;
+    gap: 1rem;
+}
+
+
 /* FOOTER */
 .footer {
     background-color: var(--primary-color);
