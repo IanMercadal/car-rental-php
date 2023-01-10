@@ -15,21 +15,10 @@ class userController {
         // renderizar vista
         require_once './views/user/login.php';
     }
-    public function admin() {
-        // renderizar vista
-        $user = new User();
-        $users = $user->getAll();
-
-        require_once './views/user/admin/index.php';
-    }
-    public function create_user() {
-        // renderizar vista
-        require_once './views/user/admin/create_user.php';
-    }
     /* METHODS */
     public function save() {
-        
         if(isset($_POST)) {
+            Utils::deleteSession("admin");
             $name = isset($_POST['name']) ? $_POST['name'] : false;
             $surname = isset($_POST['surname']) ? $_POST['surname'] : false;
             $email = isset($_POST['email']) ? $_POST['email'] : false;
@@ -47,7 +36,24 @@ class userController {
                     $user->setDate($date);
                     $user->setPassword($password);
 
+                    // Save image
+                    if(isset($_FILES['image'])) {
+                        $file = $_FILES['image'];
+                        $filename = $file['name'];
+                        $mimetype = $file['type'];
+
+                        if($mimetype == "image/jpg" || $mimetype == "image/jpeg" || $mimetype = "image/png" || $mimetype == "image/gif") {
+                            if(!is_dir('uploads/images/users/')) {
+                                mkdir('uploads/images/users/', 0777,true);
+                            }
+
+                            move_uploaded_file($file['tmp_name'],'uploads/images/users/'.$filename);
+                            $user->setImage($filename);
+                        }
+                    }
+
                     $save = $user->save();
+
                     if($save){
                         $_SESSION['register'] = "complete";
                     }else{
@@ -75,7 +81,7 @@ class userController {
 
                 if($identity->rol == 'admin') {
                     $_SESSION['admin'] = true;
-                    header("Location:".base_url."user/admin");
+                    header("Location:".base_url."car/admin");
                     return;
                 }
                 header("Location:".base_url."user/index");
@@ -90,6 +96,7 @@ class userController {
             $_SESSION["identity"] = null;
             unset($_SESSION["identity"]);
         }
+        Utils::deleteSession("admin");
         // renderizar vista
         header("Location:".base_url."user/login");
     }

@@ -19,11 +19,17 @@
                 <input type="number" name="price" value="<?php echo $car->price?>">
             </div>
             <div class="form-car-labels">
+                <label>Price Rent</label>
+                <input type="number" name="price_rent" value="<?php echo $car->price_rent?>">
+            </div>
+        </div>
+
+        <div class="form-car-inputs">
+            <div class="form-car-labels">
                 <label>Age</label>
                 <input type="number" name="age" value="<?php echo $car->age ?>">
             </div>
         </div>
-
         <div class="form-car-inputs">
             <div class="form-car-labels">
                 <label>Description</label>

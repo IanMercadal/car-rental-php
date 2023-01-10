@@ -17,6 +17,7 @@ class carController {
         require_once './views/cars/list.php';
     }
     public function admin() {
+        Utils::isAdmin();
         // renderizar vista
         $car = new Car();
         $cars = $car->getAll();
@@ -35,19 +36,22 @@ class carController {
         require_once './views/cars/car.php';
     }
     public function save() {
+        Utils::isAdmin();
         if(isset($_POST)) {
             $brand = isset($_POST['brand']) ? $_POST['brand'] : false;
             $model = isset($_POST['model']) ? $_POST['model'] : false;
             $price = isset($_POST['price']) ? $_POST['price'] : false;
+            $price_rent = isset($_POST['price_rent']) ? $_POST['price_rent'] : false;
             $age = isset($_POST['age']) ? $_POST['age'] : false;
             $description = isset($_POST['description']) ? $_POST['description'] : false;
 
-            if($brand && $model && $price && $age && $description ) {
+            if($brand && $model && $price && $age && $description && $price_rent ) {
                     // Setters
                     $car = new Car();
                     $car->setBrand($brand);
                     $car->setModel($model);
                     $car->setPrice($price);
+                    $car->setPriceRent($price_rent);
                     $car->setAge($age);
                     $car->setDescription($description);
 
@@ -87,10 +91,12 @@ class carController {
         }
     }
     public function create() {
+        Utils::isAdmin();
         // renderizar vista
         require_once './views/user/admin/create_car.php';
     }
     public function edit() {
+        Utils::isAdmin();
         if(isset($_GET['id'])) {
             $id = $_GET['id'];
         
@@ -101,6 +107,7 @@ class carController {
         require_once './views/user/admin/edit_car.php';
     }
     public function delete() {
+        Utils::isAdmin();
         if(isset($_GET['id'])) {
             $id = $_GET['id'];
             $car = new Car();
@@ -118,5 +125,18 @@ class carController {
         } else {
             $_SESSION['delete'] = "complete";
         }
+    }
+    public function filter() {
+        if(isset($_POST)) {
+            $filters = [];
+            
+            $id_car = isset($_POST['id_car']) ? $_POST['id_car'] : false;
+            $brand = isset($_POST['brand']) ? $_POST['brand'] : false;
+            $date = isset($_POST['date']) ? $_POST['date'] : false;
+            $sort_field = isset($_POST['sort_field']) ? $_POST['sort_field'] : false;
+            $sort = isset($_POST['sort']) ? $_POST['sort'] : false;
+
+        }
+        var_dump($filters);
     }
 }

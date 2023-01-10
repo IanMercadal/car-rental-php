@@ -16,7 +16,7 @@
                                 <p><b><?php echo $index?>. </b></p>
                                 <p><b>Date:</b> <?php echo $order->date ?></p>
                                 <p><b>Service:</b> <?php echo $order->service ?></p>
-                                <a class="btn btn-primary" href="<?php echo base_url ?>testimonial/create&id_order=<?php echo $order->id_order ?>">Valorar</a>
+                                <p><b>Price:</b> <?php echo $order->price ?>$</p>
                                 <?php $index += 1; ?>
                             </div>
                         <?php endwhile; ?>

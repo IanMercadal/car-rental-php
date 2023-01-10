@@ -19,6 +19,13 @@
                 <input type="number" name="price">
             </div>
             <div class="form-car-labels">
+                <label>Price Rent</label>
+                <input type="number" name="price_rent">
+            </div>
+        </div>
+
+        <div class="form-car-inputs">
+            <div class="form-car-labels">
                 <label>Age</label>
                 <input type="number" name="age">
             </div>

@@ -7,7 +7,8 @@
             <a href="<?php echo base_url ?>order/user">Orders</a>
         </div>
         <div class="bottom-row">
-            <div class="circle-profile"></div>
+                <img src="<?php echo base_url . "uploads/images/users/" . $_SESSION["identity"]->imagen ?>">
+            </div>
             <div class="user">
                 <p><b>Name: </b><?php echo $_SESSION["identity"]->name . " " . $_SESSION["identity"]->surname?></p>
                 <p><b>Date: </b><?php echo $_SESSION["identity"]->date ?></p>

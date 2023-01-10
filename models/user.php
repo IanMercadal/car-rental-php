@@ -161,7 +161,7 @@ class User {
 	}
 
     public function save() {
-        $sql = "INSERT INTO users VALUES(NULL, '{$this->getName()}', '{$this->getSurname()}', '{$this->getDate()}', CURDATE(), 'user', '{$this->getEmail()}', '{$this->getPassword()}', NULL);";
+        $sql = "INSERT INTO users VALUES(NULL, '{$this->getName()}', '{$this->getSurname()}', '{$this->getDate()}', CURDATE(), 'user', '{$this->getEmail()}', '{$this->getPassword()}', '{$this->getImage()}');";
         $save = $this->db->query($sql);
 
         $result = false;

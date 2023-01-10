@@ -5,6 +5,7 @@ class Car {
     private $brand;
     private $model;
     private $price;
+    private $price_rent;
     private $age;
     private $image;
     private $description;
@@ -156,11 +157,30 @@ class Car {
 
         return $this;
     }
+    /**
+     * Get the value of price_rent
+     */
+    public function getPriceRent()
+    {
+        return $this->price_rent;
+    }
+
+    /**
+     * Set the value of price_rent
+     */
+    public function setPriceRent($price_rent): self
+    {
+        $this->price_rent = $price_rent;
+
+        return $this;
+    }
+
 
     public function save() {
-        $sql = "INSERT INTO cars VALUES(NULL, '{$this->getBrand()}', '{$this->getModel()}', {$this->getPrice()}, {$this->getAge()}, CURDATE() , '{$this->getImage()}', '{$this->getDescription()}', 3);";
+        $id_user = intval($_SESSION['identity']->id_user);
+        $sql = "INSERT INTO cars VALUES(NULL, '{$this->getBrand()}', '{$this->getModel()}', {$this->getPrice()}, {$this->getPriceRent()} ,{$this->getAge()}, CURDATE() , '{$this->getImage()}', '{$this->getDescription()}', 1, $id_user);";
         $save = $this->db->query($sql);
-
+        
         $result = false;
         if($save) {
             $result = true;

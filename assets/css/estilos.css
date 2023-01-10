@@ -120,9 +120,9 @@ button.btn-primary {
     background-color: var(--primary-color);
 }
 .circle-profile {
-    background-image: url(../img/users/pic-1.png);
+    /* background-image: url(../img/users/pic-1.png);
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
     border-radius:50%;
     height: 150px;
     width: 150px;
@@ -615,7 +615,6 @@ a.page  {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: var(--separacion) 0;
     align-items: center;
     justify-content: center;
     width: 400px;
@@ -854,7 +853,7 @@ div.sort-options {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: var(--white);
     padding: 1rem;
     gap: 1rem;

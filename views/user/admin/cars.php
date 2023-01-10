@@ -1,9 +1,8 @@
 <section class="contenedor">
     <h1 class="text-center">Admin</h1>
-
+    
     <div class="database-admin">
         <div class="top-row">
-            <a href="<?php echo base_url ?>user/admin">Users</a>
             <a class="active-data" href="<?php base_url ?>cars">Cars</a>
         </div>
         <div class="bottom-row">
@@ -13,8 +12,7 @@
                     <a class="btn btn-primary" href="<?php base_url ?>create">Create</a>
                 </div>
                 
-
-                <form class="filter-form">
+                <form action="<?php echo base_url ?>car/filter" method="post" class="filter-form">
                     <div>
                         <label>Id</label>
                         <input type="number" name="id_car">
@@ -32,7 +30,7 @@
 
                     <div>
                         <label>Sort by</label>
-                        <select>
+                        <select name="sort_field">
                             <option>Brand</option>
                             <option>Models</option>
                             <option>Creation</option>

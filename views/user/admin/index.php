@@ -3,8 +3,7 @@
 
     <div class="database-admin">
         <div class="top-row">
-            <a class="active-data">Users</a>
-            <a href="http://localhost/car/admin">Cars</a>
+            <a class="active-data" href="http://localhost/car/admin">Cars</a>
         </div>
         <div class="bottom-row">
             <div class="filter-data">
