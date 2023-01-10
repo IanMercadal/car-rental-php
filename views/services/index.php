@@ -7,14 +7,6 @@
             <div class="site-gallery-columns">
                 <div class="left-column">
                     <img class="site-picture-active" src="<?php echo base_url ?>assets/img/services/local.jpg">
-
-                    <div class="site-gallery-control">
-                        <div class="circle-min active"></div>
-                        <div class="circle-min"></div>
-                        <div class="circle-min"></div>
-                        <div class="circle-min"></div>
-                        <div class="circle-min"></div>
-                    </div>
                 </div>
 
                 <div class="right-column">
@@ -22,7 +14,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore incidunt neque beatae nulla at quibusdam, vel, explicabo fuga deleniti laboriosam mollitia nesciunt quis quo ratione aut inventore tenetur labore accusamus?
                     Omnis, illo ducimus. Voluptatum quod doloribus omnis eius ratione in dolor laborum quae nemo voluptas quo assumenda, numquam quidem commodi magnam? Inventore aliquam non minima esse, temporibus ullam culpa numquam!
                     Sequi delectus illum in dignissimos saepe expedita, hic ullam ipsam dolore eveniet. Voluptatibus tempore natus necessitatibus eaque. Velit magni sequi exercitationem suscipit. Praesentium tempore incidunt quas dicta aliquid a maiores!</p>
-                    <a class="btn btn-primary">Unete</a>
+                    <a  href="<?php echo base_url . "user/login" ?>" class="btn btn-primary">Join</a>
                 </div>
             </div>
 

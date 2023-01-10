@@ -12,7 +12,6 @@
         <div class="car-profile-info">
             <img src="<?php echo base_url . "uploads/images/" . $car->image ?>">
         </div>
-        <div class="car-data-parent">
             <?php if(isset($_SESSION['order']) && $_SESSION['order'] == "complete") :?>
                 <div class="car-reservation">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check" width="80" height="80" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -25,79 +24,83 @@
                     <?php unset($_SESSION['order']); ?>
                 </div>
             <?php else : ?>
-                <div class="car-reservation">
-                    <?php if (isset($_SESSION["identity"])) : ?>
-                        <form class="car-reservation-form" action="<?php echo base_url ?>order/save" method="post">
-                            <h3>Get car</h3>
-                            <?php if(isset($_SESSION["order_date"])) : ?>
-                                <p class="error">Date invalid, already reserved</p>
-                                <?php unset($_SESSION["order_date"])?>
-                            <?php endif; ?>
-                            <div class="form-column">
-                                <label>Service</label>
-                                <select name="service" id="service">
-                                    <option value="rent">Rent</option>
-                                    <option value="buy">Buy</option>
-                                </select>
-                            </div>
+                <div class="car-data-parent">
+                    <div class="car-reservation">
+                        <?php if (isset($_SESSION["identity"])) : ?>
+                            <form class="car-reservation-form" action="<?php echo base_url ?>order/save" method="post">
+                                <div class="get-car">
+                                    <h3>Get car</h3>
+                                    <?php if(isset($_SESSION["order_date"])) : ?>
+                                        <p class="error">Date invalid, already reserved</p>
+                                        <?php unset($_SESSION["order_date"])?>
+                                    <?php endif; ?>
+                                </div>
 
-                            <div class="form-column">
-                                <label>Date</label>
-                                <input type="date" name="date">
-                            </div>
+                                <div class="form-column">
+                                    <label>Service</label>
+                                    <select name="service" id="service">
+                                        <option value="rent">Rent</option>
+                                        <option value="buy">Buy</option>
+                                    </select>
+                                </div>
 
-                            <input type="hidden" name="price_rent" value='<?php echo $car->price_rent ?>'>
-                            <input type="hidden" name="price" value='<?php echo $car->price ?>'>
-                            <input type="hidden" name="id_user" value='<?php echo $_SESSION["identity"]->id_user ?>'>
-                            <input type="hidden" name="id_car" value="<?php echo $_GET["id_car"] ?>">
+                                <div class="form-column">
+                                    <label>Date</label>
+                                    <input type="date" name="date">
+                                </div>
 
-                            <button class="btn btn-secondary" type="submit">Submit</button>
-                        </form>
-                    <?php else : ?>
-                        <h3>Need to login or register</h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-check" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <circle cx="9" cy="7" r="4" />
-                            <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-                            <path d="M16 11l2 2l4 -4" />
-                        </svg>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam saepe dolorem, officia ipsa reiciendis debitis distinctio obcaecati molestias tempore! Eaque id ratione assumenda adipisci aut veniam! Consectetur aperiam explicabo magnam?</p>
-                        <a class="btn btn-primary" href="<?php echo base_url ?>user/login">Login</a>
-                    <?php endif ?>
-                </div>
-                <div class="car-data">
-                    <div class="car-data-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-coin" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#e7a946" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <circle cx="12" cy="12" r="9" />
-                            <path d="M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 0 0 0 4h2a2 2 0 0 1 0 4h-2a2 2 0 0 1 -1.8 -1" />
-                            <path d="M12 6v2m0 8v2" />
-                        </svg>
-                        <p><b>Price(Rent):</b> <?php echo $car->price_rent ?>$</p>
+                                <input type="hidden" name="price_rent" value='<?php echo $car->price_rent ?>'>
+                                <input type="hidden" name="price" value='<?php echo $car->price ?>'>
+                                <input type="hidden" name="id_user" value='<?php echo $_SESSION["identity"]->id_user ?>'>
+                                <input type="hidden" name="id_car" value="<?php echo $_GET["id_car"] ?>">
+
+                                <button class="btn btn-secondary" type="submit">Submit</button>
+                            </form>
+                        <?php else : ?>
+                            <h3>Need to login or register</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-check" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                <path d="M16 11l2 2l4 -4" />
+                            </svg>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam saepe dolorem, officia ipsa reiciendis debitis distinctio obcaecati molestias tempore! Eaque id ratione assumenda adipisci aut veniam! Consectetur aperiam explicabo magnam?</p>
+                            <a class="btn btn-primary" href="<?php echo base_url ?>user/login">Login</a>
+                        <?php endif ?>
                     </div>
-                    <div class="car-data-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-coin" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#e7a946" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <circle cx="12" cy="12" r="9" />
-                            <path d="M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 0 0 0 4h2a2 2 0 0 1 0 4h-2a2 2 0 0 1 -1.8 -1" />
-                            <path d="M12 6v2m0 8v2" />
-                        </svg>
-                        <p><b>Price(Buy):</b> <?php echo $car->price ?>$</p>
-                    </div>
-                    <div class="car-data-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-event" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#e7a946" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <rect x="4" y="5" width="16" height="16" rx="2" />
-                            <line x1="16" y1="3" x2="16" y2="7" />
-                            <line x1="8" y1="3" x2="8" y2="7" />
-                            <line x1="4" y1="11" x2="20" y2="11" />
-                            <rect x="8" y="15" width="2" height="2" />
-                        </svg>
-                        <p><b>Age:</b> <?php echo $car->age ?></p>
+                    <div class="car-data">
+                        <div class="car-data-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-coin" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#e7a946" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 0 0 0 4h2a2 2 0 0 1 0 4h-2a2 2 0 0 1 -1.8 -1" />
+                                <path d="M12 6v2m0 8v2" />
+                            </svg>
+                            <p><b>Price(Rent):</b> <?php echo $car->price_rent ?>$</p>
+                        </div>
+                        <div class="car-data-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-coin" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#e7a946" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 0 0 0 4h2a2 2 0 0 1 0 4h-2a2 2 0 0 1 -1.8 -1" />
+                                <path d="M12 6v2m0 8v2" />
+                            </svg>
+                            <p><b>Price(Buy):</b> <?php echo $car->price ?>$</p>
+                        </div>
+                        <div class="car-data-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-event" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#e7a946" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <rect x="4" y="5" width="16" height="16" rx="2" />
+                                <line x1="16" y1="3" x2="16" y2="7" />
+                                <line x1="8" y1="3" x2="8" y2="7" />
+                                <line x1="4" y1="11" x2="20" y2="11" />
+                                <rect x="8" y="15" width="2" height="2" />
+                            </svg>
+                            <p><b>Age:</b> <?php echo $car->age ?></p>
+                        </div>
                     </div>
                 </div>
             <?php endif;?>
-    <?php endif;?>
-        </div>
+        <?php endif;?>
     </div>
 </section>

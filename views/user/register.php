@@ -34,7 +34,7 @@
                         <input type="text" name="name" placeholder="name" required>
                     </div>
 
-                    <div>
+                    <div class="form-column">
                         <div class="form-row">
                             <label>Surname</label>
                             <?php if (isset($_POST["surname"]) && $_POST["surname"] === false) {
@@ -78,7 +78,7 @@
                         <input type="password" name="password" required>
                     </div>
 
-                    <div>
+                    <div class="form-column"> 
                         <div class="form-row">
                             <label>Confirm Password</label>
                             <?php if (isset($_POST["password"]) && $_POST["password"] === false) {
@@ -91,8 +91,8 @@
 
                 <div class="form-columns-register">
                     <div class="form-column">
-                        <div>
-                            <label>Image</label>
+                        <div class="form-row">
+                            <label>Image <span>Only: jpg, jpeg and png</span></label>
                             <?php if (isset($_POST["image"]) && $_POST["image"] === false) {
                                 echo '<p class="error">Error with the image</p>';
                             } ?>

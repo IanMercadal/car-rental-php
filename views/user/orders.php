@@ -6,7 +6,7 @@
             <a href="<?php echo base_url ?>user/index">Data</a>
             <a class="active-data" href="<?php base_url ?>orders">Orders</a>
         </div>
-        <div class="bottom-row">
+        <div id="user-orders-parent" class="bottom-row">
             <div class="testimonials-user">
                 <h1 class="text-center">Orders</h1>
                 <?php if($orders->num_rows > 0 ) : ?>

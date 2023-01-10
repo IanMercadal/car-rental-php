@@ -61,7 +61,7 @@ class carController {
                         $filename = $file['name'];
                         $mimetype = $file['type'];
 
-                        if($mimetype == "image/jpg" || $mimetype == "image/jpeg" || $mimetype = "image/png" || $mimetype == "image/gif") {
+                        if($mimetype == "image/jpg" || $mimetype == "image/jpeg" || $mimetype = "image/png") {
                             if(!is_dir('uploads/images')) {
                                 mkdir('uploads/images', 0777,true);
                             }

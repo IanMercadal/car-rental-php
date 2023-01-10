@@ -85,6 +85,7 @@ class userController {
                     return;
                 }
                 header("Location:".base_url."user/index");
+                die();
             } else {
                 $_SESSION['error_login'] = 'Identificación fallida';
             }
