@@ -172,6 +172,10 @@ class Order {
         $orders = $this->db->query("SELECT * FROM orders where id_user = '{$id_user}' ORDER BY id_order DESC");
         return $orders;
     }
+    public function checkDate() {
+        $orders = $this->db->query("SELECT * FROM orders where id_car = {$this->getIdCar()} and date = '{$this->getDate()}'");
+        return $orders->fetch_object();
+    }
 }
 
 ?>

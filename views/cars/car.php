@@ -13,10 +13,26 @@
             <img src="<?php echo base_url . "uploads/images/" . $car->image ?>">
         </div>
         <div class="car-data-parent">
+            <?php if(isset($_SESSION['order']) && $_SESSION['order'] == "complete") :?>
+                <div class="car-reservation">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check" width="80" height="80" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M9 12l2 2l4 -4" />
+                    </svg>
+                    <p>The reservation have been completed successfully</p>
+                    <a class="btn btn-primary"href="<?php echo base_url ?>order/user">Orders</a>
+                    <?php unset($_SESSION['order']); ?>
+                </div>
+            <?php else : ?>
                 <div class="car-reservation">
                     <?php if (isset($_SESSION["identity"])) : ?>
                         <form class="car-reservation-form" action="<?php echo base_url ?>order/save" method="post">
                             <h3>Get car</h3>
+                            <?php if(isset($_SESSION["order_date"])) : ?>
+                                <p class="error">Date invalid, already reserved</p>
+                                <?php unset($_SESSION["order_date"])?>
+                            <?php endif; ?>
                             <div class="form-column">
                                 <label>Service</label>
                                 <select name="service" id="service">
@@ -81,6 +97,7 @@
                     </div>
                 </div>
             <?php endif;?>
+    <?php endif;?>
         </div>
     </div>
 </section>

@@ -29,6 +29,14 @@ class orderController {
                     $option = "rent";
                 }
                 
+                $check_date = $order->checkDate();
+
+                if($check_date != null) {
+                    $_SESSION['order_date'] = "failed";
+                    header("Location:".base_url.'car/car&id_car=' . $id_car );
+                    die();
+                }
+
                 $save = $order->save($option);
 
                 if($save){
