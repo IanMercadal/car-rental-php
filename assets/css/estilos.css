@@ -120,9 +120,9 @@ button.btn-primary {
     background-color: var(--primary-color);
 }
 .circle-profile {
-    /* background-image: url(../img/users/pic-1.png);
+    background-image: url(../img/users/pic-1.png);
     background-position: center;
-    background-size: cover; */
+    background-size: cover;
     border-radius:50%;
     height: 150px;
     width: 150px;
@@ -770,11 +770,7 @@ tr:hover {
 .database-admin .bottom-row {
     max-width: none;
 }
-.database-admin .bottom-row {
-    display: grid;
-    grid-template-columns: 20% 80%;
-    align-items: start;
-}
+
 .filter-data {
     padding: 1.2rem;
     color: var(--white);

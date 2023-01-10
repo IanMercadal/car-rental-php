@@ -126,17 +126,4 @@ class carController {
             $_SESSION['delete'] = "complete";
         }
     }
-    public function filter() {
-        if(isset($_POST)) {
-            $filters = [];
-            
-            $id_car = isset($_POST['id_car']) ? $_POST['id_car'] : false;
-            $brand = isset($_POST['brand']) ? $_POST['brand'] : false;
-            $date = isset($_POST['date']) ? $_POST['date'] : false;
-            $sort_field = isset($_POST['sort_field']) ? $_POST['sort_field'] : false;
-            $sort = isset($_POST['sort']) ? $_POST['sort'] : false;
-
-        }
-        var_dump($filters);
-    }
 }

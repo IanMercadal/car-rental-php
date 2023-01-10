@@ -6,48 +6,6 @@
             <a class="active-data" href="<?php base_url ?>cars">Cars</a>
         </div>
         <div class="bottom-row">
-            <div class="filter-data">
-                <div class="filter-header">
-                    <h3>Filter</h3>
-                    <a class="btn btn-primary" href="<?php base_url ?>create">Create</a>
-                </div>
-                
-                <form action="<?php echo base_url ?>car/filter" method="post" class="filter-form">
-                    <div>
-                        <label>Id</label>
-                        <input type="number" name="id_car">
-                    </div>
-
-                    <div>
-                        <label>Brand</label>
-                        <input type="text" name="brand">
-                    </div>
-
-                    <div>
-                        <label>Date</label>
-                        <input type="number" name="date">
-                    </div>
-
-                    <div>
-                        <label>Sort by</label>
-                        <select name="sort_field">
-                            <option>Brand</option>
-                            <option>Models</option>
-                            <option>Creation</option>
-                        </select>
-                    </div>
-
-                    <div class="sort-options">
-                        <label>Asc</label>
-                        <input type="radio" name="sort" value="asc">
-
-                        <label>Desc</label>
-                        <input type="radio" name="sort" value="desc">
-                    </div>
-                    
-                    <button class="btn btn-primary">Submit</button>
-                </form>
-            </div>
             <table>
                 <tr>
                     <th>id_car</th>

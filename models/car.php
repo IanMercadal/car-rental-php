@@ -175,7 +175,6 @@ class Car {
         return $this;
     }
 
-
     public function save() {
         $id_user = intval($_SESSION['identity']->id_user);
         $sql = "INSERT INTO cars VALUES(NULL, '{$this->getBrand()}', '{$this->getModel()}', {$this->getPrice()}, {$this->getPriceRent()} ,{$this->getAge()}, CURDATE() , '{$this->getImage()}', '{$this->getDescription()}', 1, $id_user);";
@@ -203,6 +202,16 @@ class Car {
         }
         return $result;
     }
+    public function delete() {
+        $sql = "DELETE FROM cars where id_car = {$this->id}";
+        $delete = $this->db->query($sql);
+
+        $result = false;
+        if($delete) {
+            $result = true;
+        }
+        return $result;
+    }
     public function getAll($limite = 8) {
         if($limite) {
             $users = $this->db->query("SELECT * FROM cars where state = 1 ORDER BY id_car DESC LIMIT $limite");
@@ -215,18 +224,6 @@ class Car {
         $car = $this->db->query("SELECT * FROM cars WHERE id_car = {$this->getId()}");
         return $car->fetch_object();
     }
-
-    public function delete() {
-        $sql = "DELETE FROM cars where id_car = {$this->id}";
-        $delete = $this->db->query($sql);
-
-        $result = false;
-        if($delete) {
-            $result = true;
-        }
-        return $result;
-    }
-
 }
 
 ?>
