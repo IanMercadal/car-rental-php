@@ -7,6 +7,7 @@
             <a href="<?php echo base_url ?>order/user">Orders</a>
         </div>
         <div id="user-info-br" class="bottom-row">
+
             <img class="user-profile-pic" src="<?php echo base_url . "uploads/images/users/" . $_SESSION["identity"]->imagen ?>">
             
             <div class="user">

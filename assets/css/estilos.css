@@ -119,14 +119,25 @@ button.btn-primary {
     border-radius:50%;
     background-color: var(--primary-color);
 }
-.circle-profile {
-    background-image: url(../img/users/pic-1.png);
+.circle-profile, .circle-profile-1, .circle-profile-2, .circle-profile-3 {
     background-position: center;
     background-size: cover;
     border-radius:50%;
     height: 150px;
     width: 150px;
     margin-top: 1rem;
+}
+.circle-profile {
+    background-image: url(../img/users/pic-1.png);
+}
+.circle-profile-1 {
+    background-image: url(../img/users/pic-2.png);
+}
+.circle-profile-2 {
+    background-image: url(../img/users/pic-3.png);
+}
+.circle-profile-3 {
+    background-image: url(../img/users/pic-4.png);
 }
 .rectangle {
     background-image: url(../img/users/pic-1.png);
@@ -446,11 +457,22 @@ a.page  {
     background-color: var(--primary-color);
     color: var(--white);
 }
+.car-reservation-sold {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--white);
+    min-height: 500px;
+    margin: var(--separacion) 0;
+    padding: 1rem;
+    gap: 1rem;
+}
 .car-reservation svg{
     margin-left: auto;
     margin-right: auto;
 }
-.car-reservation a.btn.btn-primary{
+.car-reservation a.btn.btn-primary, .car-reservation-sold a.btn.btn-primary{
     background-color: #fff;
     color: var(--primary-color);
     margin-left: auto;
@@ -621,7 +643,12 @@ a.page  {
 .form-auth > * {
     margin: 1rem ;
 }
-
+.form-state {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
 .register, .login {
     display: grid;
     grid-template-columns: repeat(2,1fr);

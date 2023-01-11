@@ -3,7 +3,7 @@
     
     <div class="database-admin">
         <div class="top-row">
-            <a class="active-data" href="<?php base_url ?>cars">Cars</a>
+            <a class="active-data" href="<?php base_url ?>create">Create</a>
         </div>
         <div class="bottom-row">
             <table>

@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
 
+    <link rel="icon" type="image/ico" href="<?= base_url ?>assets/img/logo.svg">
     <link rel="stylesheet" href="<?= base_url ?>assets/css/estilos.css">
 </head>
 

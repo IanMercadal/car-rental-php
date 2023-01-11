@@ -26,6 +26,12 @@ class userController {
             $password = isset($_POST['password']) ? $_POST['password'] : false;
             $repassword = isset($_POST['repassword']) ? $_POST['repassword'] : false;
 
+            if(strlen($name) <= 1 || strlen($surname) <= 3 || strlen($email) <= 5) {
+                $_SESSION['register'] = "failed";
+                header("Location:".base_url.'user/register');
+                die();
+            }
+
             if($name && $surname && $email && $date && $password && $repassword) {
                 if($password === $repassword) {
                     // Setters
@@ -37,7 +43,7 @@ class userController {
                     $user->setPassword($password);
 
                     // Save image
-                    if(isset($_FILES['image'])) {
+                    if(isset($_FILES['image']["name"])) {
                         $file = $_FILES['image'];
                         $filename = $file['name'];
                         $mimetype = $file['type'];
@@ -50,14 +56,14 @@ class userController {
                             move_uploaded_file($file['tmp_name'],'uploads/images/users/'.$filename);
                             $user->setImage($filename);
                         }
-                    }
 
-                    $save = $user->save();
-
-                    if($save){
-                        $_SESSION['register'] = "complete";
-                    }else{
-                        $_SESSION['register'] = "failed";
+                        $save = $user->save();
+    
+                        if($save){
+                            $_SESSION['register'] = "complete";
+                        }else{
+                            $_SESSION['register'] = "failed";
+                        }
                     }
                 } else {
                     $_SESSION['register'] = "failed";
@@ -82,10 +88,11 @@ class userController {
                 if($identity->rol == 'admin') {
                     $_SESSION['admin'] = true;
                     header("Location:".base_url."car/admin");
-                    return;
+                    die();
+                } else {
+                    header("Location:".base_url.'user/index');
+                    die();
                 }
-                header("Location:".base_url."user/index");
-                die();
             } else {
                 $_SESSION['error_login'] = 'Identificación fallida';
             }

@@ -20,16 +20,17 @@
                     </svg>
                     <a class="btn btn-primary" href="<?php base_url ?>/user/login">Login</a>
                 </div>
+                <?php Utils::deleteSession('register');  ?>
             <?php else : ?>
                 <h3>Form</h3>
+                <?php if(isset($_SESSION['register']) && $_SESSION['register'] == "failed") {
+                    echo '<p class="error">Error with the register</p>';
+                } ?>
 
                 <div class="form-columns-register">
                     <div class="form-column">
                         <div class="form-row">
                             <label>Name</label>
-                            <?php if (isset($_POST["name"]) && $_POST["name"] === false) {
-                                echo '<p class="error">Error with the name</p>';
-                            } ?>
                         </div>
                         <input type="text" name="name" placeholder="name" required>
                     </div>
@@ -37,9 +38,6 @@
                     <div class="form-column">
                         <div class="form-row">
                             <label>Surname</label>
-                            <?php if (isset($_POST["surname"]) && $_POST["surname"] === false) {
-                                echo '<p class="error">Error with the surname</p>';
-                            } ?>
                         </div>
                         <input type="text" name="surname" placeholder="surname" required>
                     </div>
@@ -49,9 +47,6 @@
                     <div class="form-column">
                         <div class="form-row">
                             <label>Email</label>
-                            <?php if (isset($_POST["email"]) && $_POST["email"] === false) {
-                                echo '<p class="error">Error with the email</p>';
-                            } ?>
                         </div>
                         <input type="email" name="email" placeholder="email" required>
                     </div>
@@ -59,9 +54,6 @@
                     <div class="form-column">
                         <div class="form-row">
                             <label>Date</label>
-                            <?php if (isset($_POST["date"]) && $_POST["date"] === false) {
-                                echo '<p class="error">Error with the date</p>';
-                            } ?>
                         </div>
                         <input type="date" name="date" required>
                     </div>
@@ -71,9 +63,6 @@
                     <div class="form-column">
                         <div class="form-row">
                             <label>Password</label>
-                            <?php if (isset($_POST["password"]) && $_POST["password"] === false) {
-                                echo '<p class="error">Error with the password</p>';
-                            } ?>
                         </div>
                         <input type="password" name="password" required>
                     </div>
@@ -81,9 +70,6 @@
                     <div class="form-column"> 
                         <div class="form-row">
                             <label>Confirm Password</label>
-                            <?php if (isset($_POST["password"]) && $_POST["password"] === false) {
-                                echo '<p class="error">Error with the repassword</p>';
-                            } ?>
                         </div>
                         <input type="password" name="repassword" required>
                     </div>
@@ -93,11 +79,8 @@
                     <div class="form-column">
                         <div class="form-row">
                             <label>Image <span>Only: jpg, jpeg and png</span></label>
-                            <?php if (isset($_POST["image"]) && $_POST["image"] === false) {
-                                echo '<p class="error">Error with the image</p>';
-                            } ?>
                         </div>
-                        <input type="file" name="image">
+                        <input required type="file" name="image">
                     </div>
                 </div>
 
