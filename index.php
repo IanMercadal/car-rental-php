@@ -8,8 +8,8 @@ require_once 'helpers/utils.php';
 require_once 'views/layout/header.php';
 
 function show_error() {
-    // header("Location:" .base_url);
-    echo "error";
+    $error = new errorController();
+    $error->index();
 }
 
 if(isset($_GET['controller'])) {
