@@ -656,6 +656,12 @@ a.page  {
     height: 500px;
     align-items: stretch;
 }
+.form-status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
 .register .register-info, .login .login-info {
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
@@ -782,22 +788,23 @@ a.page  {
     height:500px
 }
 /* ADMIN */
-.table td{
-    text-align: center;
-}
-tr:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
-.database-admin .top-row,.database-admin .bottom-row table {
+.admin-car-row {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
+    gap: 1rem;
     width: 100%;
-    border-bottom: solid 2px var(--primary-color);
+    justify-content: center;
+}
+.admin-car-info {
+    width: 100px;
 }
 .database-admin .bottom-row {
+    align-items: flex-start !important;
     max-width: none;
+}
+.database-admin .top-row {
+    width: 100%;
 }
 
 .filter-data {
@@ -851,8 +858,8 @@ div.sort-options {
     padding: 1rem;
 }
 .form-car {
-    background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
 
 .form-car-inputs {
@@ -860,7 +867,7 @@ div.sort-options {
     flex-direction: row;
     justify-content: center;
     margin: 1rem;
-    gap: 1rem
+    gap: 1rem;
 }
 .form-car-labels {
     display: flex;
@@ -1026,7 +1033,7 @@ div.sort-options {
     .register, .login {
         display: grid;
         grid-template-columns: none;
-        grid-template-rows: repeat(2,1fr);
+        grid-template-rows: 40% 60%;
         padding: var(--separacion);
         height: auto !important;
     }

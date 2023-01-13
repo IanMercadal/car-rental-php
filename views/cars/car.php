@@ -66,7 +66,7 @@
                                 <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
                                 <path d="M16 11l2 2l4 -4" />
                             </svg>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam saepe dolorem, officia ipsa reiciendis debitis distinctio obcaecati molestias tempore! Eaque id ratione assumenda adipisci aut veniam! Consectetur aperiam explicabo magnam?</p>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam saepe dolorem, officia ipsa reiciendis debitis distinctio obcaecati molestias tempore!</p>
                             <a class="btn btn-primary" href="<?php echo base_url ?>user/login">Login</a>
                         <?php endif ?>
                     </div>

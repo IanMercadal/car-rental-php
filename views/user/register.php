@@ -22,10 +22,12 @@
                 </div>
                 <?php Utils::deleteSession('register');  ?>
             <?php else : ?>
-                <h3>Form</h3>
-                <?php if(isset($_SESSION['register']) && $_SESSION['register'] == "failed") {
-                    echo '<p class="error">Error with the register</p>';
-                } ?>
+                <div class="form-status">
+                    <h3>Form</h3>
+                    <?php if(isset($_SESSION['register']) && $_SESSION['register'] == "failed") {
+                        echo '<strong class="error">Error with the register</strong>';
+                    } ?>
+                </div>
 
                 <div class="form-columns-register">
                     <div class="form-column">
@@ -73,6 +75,10 @@
                         </div>
                         <input type="password" name="repassword" required>
                     </div>
+                </div>
+
+                <div class="form-columns-register">
+                    <span>Password must have a length of 8 letters</span>
                 </div>
 
                 <div class="form-columns-register">

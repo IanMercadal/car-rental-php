@@ -34,6 +34,15 @@ class userController {
 
             if($name && $surname && $email && $date && $password && $repassword) {
                 if($password === $repassword) {
+
+                    $validarPassword = Utils::validarPassword($password);
+
+                    if(!$validarPassword) {
+                        $_SESSION['register'] = "failed";
+                        header("Location:".base_url.'user/register');
+                        die();
+                    }
+                    
                     // Setters
                     $user = new User();
                     $user->setName($name);

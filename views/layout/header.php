@@ -112,7 +112,7 @@
 
                                 <div class="option-example-text">
                                     <p>Price Range (Buy)</p>
-                                    <p><b>60k - 200k</b></p>
+                                    <p><b>18k - 120k</b></p>
                                 </div>
                             </div>
                             <div class="option-example">
@@ -128,7 +128,7 @@
 
                                 <div class="option-example-text">
                                     <p>Price Range (Rent)</p>
-                                    <p><b>250$ - 500$</b></p>
+                                    <p><b>160$ - 500$</b></p>
                                 </div>
                             </div>
                         </div>

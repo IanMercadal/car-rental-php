@@ -10,10 +10,12 @@
         </div>
 
         <form class="form-auth" action="<?=base_url?>user/auth_login" method="post">
-            <h3>Form</h3>
-            <?php if(isset($_SESSION['error_login'])) :?>
-                <strong class="error">Error with login, check email or password</strong>
-            <?php endif ; ?>
+            <div class="form-status">
+                <h3>Form</h3>
+                <?php if(isset($_SESSION['error_login'])) :?>
+                    <strong class="error">Error with login, check email or password</strong>
+                <?php endif ; ?>
+            </div>
             <?php Utils::deleteSession('error_login'); ?>
             <div class="form-columns">
                 <div class="form-column">

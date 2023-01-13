@@ -46,7 +46,7 @@
         </div>
 
         <div class="form-car-inputs">
-            <button class="btn btn-secondary">Submit</button>
+            <button class="btn btn-primary">Submit</button>
         </div>
     </form>
     
