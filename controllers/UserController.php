@@ -1,10 +1,13 @@
 <?php
 require_once 'models/user.php';
+require_once 'models/order.php';
 
 class userController {
     /* VIEWS */
     public function index() {
         // renderizar vista
+        $order = new Order();
+        $orders = $order->getAllFromUser();
         require_once './views/user/index.php';
     }
     public function register() {

@@ -36,6 +36,7 @@ h1 {
 }
 h2 {
     font-size: 2.4rem;   
+    text-transform: capitalize;
 }
 h3 {
     font-size: 2rem;   
@@ -57,6 +58,7 @@ li {
 }
 button {
     border: none;
+    font-family: var(--primary-font);
 }
 .contenedor {
     max-width: 120rem;
@@ -155,6 +157,7 @@ input, select {
     border: none;
     height: 30px;
     width: 100%;
+    font-family: var(--primary-font);
 }
 
 .crud-result {
@@ -191,6 +194,11 @@ input, select {
     width: 98%; */
     width: 100%;
     background-color: var(--primary-color);
+    /* background-image:url(../img/banner.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px; */
 }
 .navigation {
     display: flex;
@@ -330,15 +338,16 @@ a.page  {
     grid-template-columns: repeat(4,1fr);
     justify-items: center;
     gap: 1rem;
+    width: 100%;
 }
 .car-demo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 0.8rem;
-    border-radius: 0.8rem;
     background-color: var(--secondary-color);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 100%;
 }
 .car-demo > * {
     padding: 0.8rem;
@@ -347,8 +356,10 @@ a.page  {
     margin: 0.8rem;
 }
 .car-demo .car-picture {
-    height: 150px;
-    width: 260px;
+    height: 175px;
+    width: 100% !important;
+    max-width: 100% !important;
+    object-fit: cover;
     padding: 0;
 }
 .caracteristicas {
@@ -448,6 +459,7 @@ a.page  {
 .car-profile {
     display: grid;
     grid-template-columns: 70% 30%;
+    gap: 1rem;
     padding: var(--separacion);
 }
 .car-profile-info {
@@ -461,8 +473,18 @@ a.page  {
 .car-reservation {
     display: flex;
     flex-direction: column;
+    color: var(--primary-color);
+}
+.car-reservation input, .car-reservation select {
+    border-bottom: 1px solid #21304D;
+}
+.car-reservation button {
     background-color: var(--primary-color);
-    color: var(--white);
+    color: white;
+}
+.car-reservation button:hover {
+    transform: scale(1.02);
+    transition: ease-in 0.2s;
 }
 .car-reservation-sold {
     display: flex;
@@ -492,14 +514,10 @@ a.page  {
 }
 .car-data {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(6,1fr);
     width: 100%;
     background-color: var(--secondary-color);
     padding: 1rem;
-}    
-.car-data-parent {
-    display: grid;
-    grid-template-rows: repeat(2,1fr);
 }
 .car-data-icon {
     display: flex;
@@ -629,8 +647,9 @@ a.page  {
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-    justify-content: center;
-    width: 400px;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
     background: var(--secondary-color);
     margin-left: auto;
     margin-right: auto;
@@ -670,13 +689,7 @@ a.page  {
     gap: 1rem;
 }
 .register .register-info, .login .login-info {
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
     color: var(--white);
-}
-.register .form-auth, .login .form-auth {
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
 }
 .register-info, .login-info {
     display: flex;
@@ -732,8 +745,19 @@ a.page  {
     background-color: var(--secondary-color);
 }
 /* USER INFO */
-.user-info {
+/* .user-info {
     display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding: var(--separacion);
+    min-height: 500px;
+    width: 100%;
+    align-items: center;
+} */
+.user-info {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
     flex-direction: column;
     justify-items: center;
     padding: var(--separacion);
@@ -780,6 +804,9 @@ a.page  {
 .user-profile-pic {
     width: 150px;
 }
+.user-column {
+    width: 100%;
+}
 #user-orders-parent {
     display: flex;
     flex-direction: column;
@@ -789,10 +816,14 @@ a.page  {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    min-height: 500px;
 }
 #user-info-br {
-    height:500px
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:500px;
+    width: 100%;
+    background-color: var(--secondary-color);
 }
 /* ADMIN */
 .admin-car-row {
@@ -908,6 +939,8 @@ div.sort-options {
     gap: 1rem;
     justify-items: center;
     width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 .footer-nav {
     display: flex;

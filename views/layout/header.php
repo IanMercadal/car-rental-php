@@ -58,7 +58,7 @@
 
         <!-- BANNER -->
         <?php if ($_SERVER['REQUEST_URI'] == "/") : ?>
-            <div class="banner-bg">
+             <div class="banner-bg">
                 <div class="contenedor">
                     <div class="banner-inicio">
                         <div class="banner">
@@ -134,7 +134,7 @@
                         </div>
                     </div>
 
-                </div>
+                </div> 
             </div>
         <?php endif; ?>
     </header>

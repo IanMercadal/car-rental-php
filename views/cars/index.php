@@ -43,7 +43,7 @@
 <!-- CAR LIST -->
 <section class="contenedor">
     <div id="index-cars">
-        <h2 class="text-center">Popular cars</h2>
+        <h2 class="text-center">Our collection cars</h2>
         <div class="car-list">
             <?php while ($car = $cars->fetch_object()) :?>
             <div class="car-demo">
