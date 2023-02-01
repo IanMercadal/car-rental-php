@@ -22,7 +22,7 @@
     <?php else : ?>
         <div class="car-profile">
             <div class="car-profile-info">
-                <h1 class="text-center"><?php echo $car->brand . " " . $car->model ?></h1>
+                
                 <img src="<?php echo base_url . "uploads/images/" . $car->image ?>">
                 <div class="car-data">
                     <div class="car-data-icon">
@@ -119,12 +119,14 @@
                         <path d="M9 12l2 2l4 -4" />
                     </svg>
                     <p class="text-center">The reservation have been completed successfully</p>
-                    <a class="btn btn-secondary" href="<?php echo base_url ?>order/user">Orders</a>
+                    <a class="btn btn-secondary" href="<?php echo base_url ?>user/index">Orders</a>
                     <?php unset($_SESSION['order']); ?>
                 </div>
             <?php else : ?>
                 <div class="car-data-parent">
                     <div class="car-reservation">
+                        <h1 class="text-center"><?php echo $car->brand . " " . $car->model ?></h1>
+                        <p><b>Description:</b><br> <?php echo $car->description ?></p>
                         <?php if (isset($_SESSION["identity"])) : ?>
                             <form class="car-reservation-form" action="<?php echo base_url ?>order/save" method="post">
                                 <div class="get-car">
@@ -157,14 +159,14 @@
                             </form>
                         <?php else : ?>
                             <h3>Need to login or register</h3>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-check" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-check" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <circle cx="9" cy="7" r="4" />
                                 <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
                                 <path d="M16 11l2 2l4 -4" />
                             </svg>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam saepe dolorem, officia ipsa reiciendis debitis distinctio obcaecati molestias tempore!</p>
-                            <a class="btn btn-primary" href="<?php echo base_url ?>user/login">Login</a>
+                            <a class="btn btn-secondary" href="<?php echo base_url ?>user/login">Login</a>
                         <?php endif ?>
                     </div>
                 </div>

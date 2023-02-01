@@ -7,7 +7,7 @@
             <a class="active-data" href="<?php base_url ?>orders">Orders</a>
         </div>
         <div id="user-orders-parent" class="bottom-row">
-            <div class="testimonials-user">
+            <div class="orders-user">
                 <h1 class="text-center">Orders</h1>
                 <?php if($orders->num_rows > 0 ) : ?>
                     <div class="user-orders">

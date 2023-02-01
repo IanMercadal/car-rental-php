@@ -15,7 +15,7 @@
                 </div>
             </div>
         </div>
-        <div class="testimonials-user">
+        <div class="orders-user">
                 <h1 class="text-center">Orders</h1>
                 <?php if($user_info->num_rows > 0 ) : ?>
                     <div class="user-orders">

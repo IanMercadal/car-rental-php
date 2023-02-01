@@ -126,8 +126,8 @@ button.btn-primary {
     background-position: center;
     background-size: cover;
     border-radius:50%;
-    height: 150px;
-    width: 150px;
+    height: 50px;
+    width: 50px;
     margin-top: 1rem;
 }
 .circle-profile {
@@ -159,6 +159,8 @@ input, select {
     height: 30px;
     width: 100%;
     font-family: var(--primary-font);
+    border-bottom: 1px solid var(--primary-color);
+    background-color: transparent;
 }
 
 .crud-result {
@@ -194,7 +196,6 @@ input, select {
     margin-right: 2rem;
     width: 98%; */
     width: 100%;
-    background-color: var(--primary-color);
     /* background-image:url(../img/banner.webp);
     background-position: center;
     background-repeat: no-repeat;
@@ -208,6 +209,12 @@ input, select {
     align-items: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    color: var(--primary-color);
+    background-color: white;
+    border-bottom: 2px solid var(--primary-color);
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .logo {
     display: flex;
@@ -229,7 +236,7 @@ p#logo-text  {
     padding: 0.8rem;
 }
 a.page  {
-    color: var(--white);
+    color: var(--primary-color);
 }
 .page:hover {
     background-color: var(--secondary-color);
@@ -253,12 +260,14 @@ a.page  {
 
 /* BANNER */
 .banner-bg {
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
+    background-color: white;
     width: 100%;
 }
 .banner {
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    color: var(--primary-color);
 }
 .banner-text {
     display: flex;
@@ -459,7 +468,7 @@ a.page  {
 /* CAR PROFILE */
 .car-profile {
     display: grid;
-    grid-template-rows: 72% 28%;
+    grid-template-columns: 72% 28%;
     gap: 1rem;
     /* padding: var(--separacion); */
     width: 80%;
@@ -533,6 +542,10 @@ a.page  {
     padding: 1rem 0 1rem 0;
     gap: 1rem;
 }
+.car-data-parent {
+    background-color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
 .car-data-icon {
     display: flex;
     flex-direction: column;
@@ -543,7 +556,9 @@ a.page  {
     padding: 1rem;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
-
+.car-reservation {
+    background-color: var(--secondary-color);
+}
 .car-reservation > * {
     margin: 1rem;
 }
@@ -630,10 +645,12 @@ a.page  {
     gap: 2rem;
 }
 .testimonial-card {
+    display: flex;
+    flex-direction: column;
     background-color: var(--secondary-color);
-    border-radius: 1rem;
-    width: 300px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 400px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .testimonial-card > * {
     padding: 0.8rem;
@@ -648,6 +665,16 @@ a.page  {
 .testimonial-card:hover svg path {
     fill: var(--white);
 }
+.top-testimonial {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+}
+.testimonial-bottom {
+    display: flex;
+    flex-direction: column;
+}
 .testimonial-grafic {
     display: flex;
     flex-direction: column;
@@ -660,7 +687,7 @@ a.page  {
     font-size: 1.6rem;
     font-weight: bold;
 }
-.testimonials-user {
+.orders-user {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -668,14 +695,54 @@ a.page  {
     justify-content: flex-start;
     width: 100%;
     height: 100%;
-    background: var(--secondary-color);
+    /* background: var(--secondary-color); */
     margin-left: auto;
     margin-right: auto;
     max-height: 500px;
     overflow: auto;
 }
-.testimonials-user > * {
+.orders-user > * {
     padding: 1rem;
+}
+/* TESTIMONIAL */
+.star {
+    position: relative;
+    
+    display: inline-block;
+    width: 0;
+    height: 0;
+    
+    margin-left: .9em;
+    margin-right: .9em;
+    margin-bottom: 1.2em;
+    
+    border-right:  .3em solid transparent;
+    border-bottom: .7em  solid #FC0;
+    border-left:   .3em solid transparent;
+  
+    /* Controlls the size of the stars. */
+    font-size: 10px;
+}
+.star:before, .star:after {
+    content: '';
+    
+    display: block;
+    width: 0;
+    height: 0;
+    
+    position: absolute;
+    top: .6em;
+    left: -1em;
+  
+    border-right:  1em solid transparent;
+    border-bottom: .7em  solid #FC0;
+    border-left:   1em solid transparent;
+  
+    transform: rotate(-35deg);
+  }
+  
+.star:after {  
+transform: rotate(35deg);
 }
 /* REGISTER */
 .form-auth {
@@ -920,7 +987,6 @@ div.sort-options {
 }
 .form-car {
     color: var(--primary-color);
-    background-color: var(--secondary-color);
 }
 
 .form-car-inputs {
@@ -934,10 +1000,10 @@ div.sort-options {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    width: 100%;
 }
 .form-car-labels textarea {
     resize: none;
-    width: 200px;
     height: 150px;
 }
 
@@ -947,22 +1013,34 @@ div.sort-options {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    background-color: var(--white);
+    background-color: var(--secondary-color);
     padding: 1rem;
     gap: 1rem;
     text-transform: capitalize;
 }
-
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 
 /* FOOTER */
 .footer {
-    background-color: var(--primary-color);
-    color: var(--white);
+    border-top: 2px solid var(--primary-color);
+    background-color: white;
+    color: var(--primary-color);
     display: grid;
     grid-template-rows: 80% 20%;
     gap: 1rem;
     justify-items: center;
-    width: 100%;
+    width: 98%;
     margin-top: 1rem;
 }
 .footer-nav {
@@ -1138,7 +1216,7 @@ div.sort-options {
     .top-row {
         width: 100%;
     }
-    .testimonials-user {
+    .orders-user {
         width: 100%;
     }
 }

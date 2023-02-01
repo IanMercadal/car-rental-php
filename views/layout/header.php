@@ -33,9 +33,9 @@
             </div>
             <div class="pages">
                 <a class="page" href="<?php base_url ?>/">Home</a>
-                <a class="page" href="<?php base_url ?>#services">Services</a>
-                <a class="page" href="<?php base_url ?>#list">Cars</a>
-                <a class="page" href="<?php base_url ?>#testimonials">Testimonials</a>
+                <a class="page" <?php if ($_SERVER['REQUEST_URI'] !== "/") {  ?> href="<?php echo base_url ?>#services" <?php } ?> href="<?php base_url ?>#services">Services</a>
+                <a class="page" <?php if ($_SERVER['REQUEST_URI'] !== "/") {  ?> href="<?php echo base_url ?>#list" <?php } ?> href="<?php base_url ?>#list">Cars</a>
+                <a class="page" <?php if ($_SERVER['REQUEST_URI'] !== "/") {  ?> href="<?php echo base_url ?>#testimonials" <?php } ?> href="<?php base_url ?>#testimonials">Testimonials</a>
             </div>
 
             <div class="option">
@@ -44,7 +44,7 @@
                     <a class="btn btn-primary" href="<?php base_url ?>/user/login">Login</a>
                 <?php else : ?>
                     <a href="<?php echo base_url?>user/logout">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#21304D" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                             <circle cx="9" cy="7" r="4" />
                             <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
@@ -66,8 +66,8 @@
                                 <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nulla enim, ab numquam, doloremque </h1>
                                 <p>Debitis dicta eaque perferendis dolorum, blanditiis voluptates? Mollitia inventore dolores libero illo, dicta aliquid nobis illum?</p>
                                 <div class="buttons">
-                                    <a class="btn btn-primary">Buy Cars</a>
-                                    <a class="btn btn-primary">Rent Cars</a>
+                                    <a href="#list" class="btn btn-secondary">Buy Cars</a>
+                                    <a href="#list" class="btn btn-secondary">Rent Cars</a>
                                 </div>
                             </div>
                             <div class="banner-img"></div>
