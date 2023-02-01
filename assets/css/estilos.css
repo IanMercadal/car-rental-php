@@ -1,5 +1,6 @@
 :root {
-    --primary-color: #21304D;
+    /* --primary-color: #21304D; */
+    --primary-color: #313638;
     --secondary-color: #e3e3e3;
     --white: #fff;
 
@@ -26,7 +27,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    /* gap: 4rem; */
     align-items: center;
 }
 h1,h2,h3 {
@@ -64,7 +65,7 @@ button {
 .contenedor {
     max-width: 120rem;
     width: 90%;
-    margin: 0 auto;
+    margin: 4rem auto;
 }
 /* UTILIS */
 .text-center {
@@ -189,7 +190,17 @@ input, select {
     justify-content: center;
     gap: 2rem;
 }
-
+.dos-columnas {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    min-height: 400px;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.img-contact {
+    width: 100%;
+    object-fit: cover;
+}
 /* NAVIGATION */
 .header {
     /* margin-left: 2rem;
@@ -212,7 +223,7 @@ input, select {
     color: var(--primary-color);
     background-color: white;
     border-bottom: 2px solid var(--primary-color);
-    width: 98%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -225,7 +236,7 @@ input, select {
     gap: 0.4rem;
 }
 p#logo-text  {
-    color: var(--white);
+    color: var(--primary-color);
 }
 .pages {
     display: flex;
@@ -234,6 +245,7 @@ p#logo-text  {
 }
 .page {
     padding: 0.8rem;
+    text-transform: capitalize;
 }
 a.page  {
     color: var(--primary-color);
@@ -260,9 +272,18 @@ a.page  {
 
 /* BANNER */
 .banner-bg {
+    height: 600px;
     /* background-color: var(--primary-color); */
-    background-color: white;
+    /* background-color: white; */
     width: 100%;
+}
+.banner-img {
+    background-image: url(../img/banner-nuevo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 .banner {
     display: grid;
@@ -281,10 +302,10 @@ a.page  {
     padding-top: 0;
 }
 .banner-img {
-    background-image: url(../img/banner-car.png);
+    /* background-image: url(../img/banner-car.png);
     background-position: center;
     background-repeat: no-repeat;
-    height: 300px;
+    height: 300px; */
 }
 .banner-inicio {
     padding: var(--separacion) 0;
@@ -466,6 +487,14 @@ a.page  {
 }
 
 /* CAR PROFILE */
+.car-background {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
 .car-profile {
     display: grid;
     grid-template-columns: 72% 28%;
@@ -538,13 +567,13 @@ a.page  {
     grid-template-columns: repeat(6,1fr);
     width: 100%;
     /* background-color: var(--secondary-color); */
-    border-bottom: 2px solid var(--primary-color);
-    padding: 1rem 0 1rem 0;
+    /* border-bottom: 2px solid var(--primary-color); */
+    padding: 1rem 0 0 0;
     gap: 1rem;
 }
 .car-data-parent {
     background-color: var(--secondary-color);
-    border-bottom: 2px solid var(--primary-color);
+    /* border-bottom: 2px solid var(--primary-color); */
 }
 .car-data-icon {
     display: flex;
@@ -695,11 +724,12 @@ a.page  {
     justify-content: flex-start;
     width: 100%;
     height: 100%;
-    /* background: var(--secondary-color); */
+    background: var(--primary-color);
     margin-left: auto;
     margin-right: auto;
     max-height: 500px;
     overflow: auto;
+    color: white;
 }
 .orders-user > * {
     padding: 1rem;
@@ -906,6 +936,7 @@ transform: rotate(35deg);
     flex-direction: column;
     gap: 1rem;
     width: 100%;
+    color: #000;
 }
 #user-info-br {
     display: flex;
@@ -913,7 +944,8 @@ transform: rotate(35deg);
     align-items: center;
     height:500px;
     width: 100%;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
+    color: white;
 }
 /* ADMIN */
 .admin-car-row {
@@ -1005,6 +1037,14 @@ div.sort-options {
 .form-car-labels textarea {
     resize: none;
     height: 150px;
+    font-family: var(--primary-font);
+}
+
+/* CONTACT */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 /* ORDERS */
@@ -1034,14 +1074,13 @@ div.sort-options {
 /* FOOTER */
 .footer {
     border-top: 2px solid var(--primary-color);
-    background-color: white;
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
     display: grid;
     grid-template-rows: 80% 20%;
     gap: 1rem;
     justify-items: center;
-    width: 98%;
-    margin-top: 1rem;
+    width: 100%;
 }
 .footer-nav {
     display: flex;
@@ -1060,13 +1099,15 @@ div.sort-options {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1.2rem;
+    margin: 1rem 0 1rem 0;
 }
 .footer-copy {
     margin: 1.2rem;
     font-size: 18px;
     font-weight: bolder;
 }
+
 
 /* MEDIA QUERIES */
 
@@ -1091,10 +1132,23 @@ div.sort-options {
         display: flex;
         flex-direction: column;
     }
-
+}
+/* max-width: 1150px */
+@media (max-width: 1100px) {
+    .dos-columnas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .img-contact {
+        width: 80%;
+    }
 }
 /* max-width: 1024 */
 @media (max-width: 1024px) {
+    .car-demo .car-picture {
+        height: 250px;
+    }
     .site-gallery-columns {
         display: flex;
         flex-direction: column;
@@ -1123,7 +1177,7 @@ div.sort-options {
 }
 /* max-width: 768px */
 @media (max-width: 768px) {
-    .navigation {
+    .navigation, .option {
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -1136,6 +1190,7 @@ div.sort-options {
         justify-items: center;
         justify-content: center;
         align-items: center;
+        gap: 1rem;
     }
     .car-data {
         display: flex;

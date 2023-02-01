@@ -45,22 +45,22 @@
     <div id="index-cars">
         <h2 class="text-center">Our collection cars</h2>
         <div class="car-list">
-            <?php while ($car = $cars->fetch_object()) :?>
-            <div class="car-demo">
-                <img class="car-picture" src="<?php echo base_url ."uploads/images/". $car->image?>">
-                <div>
-                    <p><b><?php echo $car->brand ?></b></p>
-                    <h3><?php echo $car->brand . " " . $car->model ?></h3>
-                    <div class="caracteristicas">
-                        <p><b>Age:</b> <?php echo $car->age ?></p>
-                        <p><b>Rent:</b> <?php echo $car->price_rent ?>$</p>
+            <?php while ($car = $cars->fetch_object()) : ?>
+                <div class="car-demo">
+                    <img class="car-picture" src="<?php echo base_url . "uploads/images/" . $car->image ?>">
+                    <div>
+                        <p><b><?php echo $car->brand ?></b></p>
+                        <h3><?php echo $car->brand . " " . $car->model ?></h3>
+                        <div class="caracteristicas">
+                            <p><b>Age:</b> <?php echo $car->age ?></p>
+                            <p><b>Rent:</b> <?php echo $car->price_rent ?>$</p>
+                        </div>
+                        <p><b>Price:</b> <?php echo $car->price ?>$</p>
+
                     </div>
-                    <p><b>Price:</b> <?php echo $car->price ?>$</p>
-                    
+                    <a href="<?php echo base_url . "car/car&id_car=" . $car->id_car  ?>" class="btn btn-primary">Ver</a>
                 </div>
-                <a href="<?php echo base_url . "car/car&id_car=" . $car->id_car  ?>" class="btn btn-primary">Ver</a>
-            </div>
-            <?php endwhile;?>
+            <?php endwhile; ?>
         </div>
     </div>
 
@@ -88,7 +88,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sit non sapiente, autem reprehenderit totam officia saepe, itaque unde facere, optio eius sunt doloremque? Facilis, dolor velit? Consectetur, tempora? Iste.</p>
                     <div class="testimonial-grafic">
                         <p class="testimonial-name">John Doe</p>
-                </div>
+                    </div>
                 </div>
             </div>
             <div class="testimonial-card">
@@ -107,7 +107,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sit non sapiente, autem reprehenderit totam officia saepe, itaque unde facere, optio eius sunt doloremque? Facilis, dolor velit? Consectetur, tempora? Iste.</p>
                     <div class="testimonial-grafic">
                         <p class="testimonial-name">John Doe</p>
-                </div>
+                    </div>
                 </div>
             </div>
             <div class="testimonial-card">
@@ -126,8 +126,55 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sit non sapiente, autem reprehenderit totam officia saepe, itaque unde facere, optio eius sunt doloremque? Facilis, dolor velit? Consectetur, tempora? Iste.</p>
                     <div class="testimonial-grafic">
                         <p class="testimonial-name">John Doe</p>
+                    </div>
                 </div>
-                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CONTACT -->
+<section id="contact" class="contenedor">
+    <h2 class="text-center">Contact</h2>
+    <div class="dos-columnas">
+        <img class="img-contact" src="<?php echo base_url ?>assets/img/services/business.jpg">
+        <div class="contact-info">
+            
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, eius autem aliquam assumenda cumque officia ea rerum saepe fugiat velit, quibusdam beatae quasi! Sint nihil hic porro sed cum est.
+            Aperiam eaque sapiente illo provident praesentium debitis, quia a rerum, obcaecati itaque enim vel? Tenetur odit porro officiis exercitationem aliquid? Aspernatur eum nulla laboriosam eius! Ut perferendis quam sunt sint.</p>
+            
+            <div class="footer-data">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <polyline points="3 7 12 13 21 7" />
+                </svg>
+                <p>correo@correo.es</p>
+            </div>
+
+            <div class="footer-data">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                </svg>
+                <p>1111-1111-1111-1111</p>
+            </div>
+
+            <div class="footer-data">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                </svg>
+                <p>2222-2222-2222-2222</p>
+            </div>
+
+            <div class="footer-data">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <polyline points="5 12 3 12 12 3 21 12 19 12" />
+                    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                    <rect x="10" y="12" width="4" height="4" />
+                </svg>
+                <p>Calle Invent, 25 bajos</p>
             </div>
         </div>
     </div>

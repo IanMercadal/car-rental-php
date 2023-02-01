@@ -23,7 +23,7 @@
     <header class="header">
         <nav class="navigation">
             <div class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-car" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-car" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#21304D" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <circle cx="7" cy="17" r="2" />
                     <circle cx="17" cy="17" r="2" />
@@ -36,6 +36,7 @@
                 <a class="page" <?php if ($_SERVER['REQUEST_URI'] !== "/") {  ?> href="<?php echo base_url ?>#services" <?php } ?> href="<?php base_url ?>#services">Services</a>
                 <a class="page" <?php if ($_SERVER['REQUEST_URI'] !== "/") {  ?> href="<?php echo base_url ?>#list" <?php } ?> href="<?php base_url ?>#list">Cars</a>
                 <a class="page" <?php if ($_SERVER['REQUEST_URI'] !== "/") {  ?> href="<?php echo base_url ?>#testimonials" <?php } ?> href="<?php base_url ?>#testimonials">Testimonials</a>
+                <a class="page" <?php if ($_SERVER['REQUEST_URI'] !== "/") {  ?> href="<?php echo base_url ?>#contact" <?php } ?> href="<?php base_url ?>#contact">Contact</a>
             </div>
 
             <div class="option">
@@ -58,8 +59,10 @@
 
         <!-- BANNER -->
         <?php if ($_SERVER['REQUEST_URI'] == "/") : ?>
-             <div class="banner-bg">
-                <div class="contenedor">
+            <div class="banner-bg">
+                <div class="banner-img">
+            </div>
+                <!--  <div class="contenedor">
                     <div class="banner-inicio">
                         <div class="banner">
                             <div class="banner-text">
@@ -132,9 +135,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                </div> 
+                    </div> 
+                </div> -->
             </div>
         <?php endif; ?>
     </header>
