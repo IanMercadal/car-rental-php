@@ -196,4 +196,20 @@ class User {
         $users = $this->db->query("SELECT * FROM users ORDER BY id_user DESC");
         return $users;
     }
+
+	public function getAllOrders() {
+        $sql = "SELECT * 
+			FROM users U
+			JOIN orders O
+			ON O.id_user = U.id_user";
+        $user_info = $this->db->query($sql);
+
+        return $user_info;
+    }
+
+	public function getCarImgae($id_car) {
+		$sql_image_car = "SELECT image from cars where id_car = $id_car";
+		$sql_image = $this->db->query($sql_image_car);
+		return $sql_image;
+	}
 }

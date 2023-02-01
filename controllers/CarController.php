@@ -6,7 +6,7 @@ class carController {
     /* VIEWS */
     public function index() {
         $car = new Car();
-        $cars = $car->getAll(8);
+        $cars = $car->getAll();
         // renderizar vista
         require_once './views/cars/index.php';
     }

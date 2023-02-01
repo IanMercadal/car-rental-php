@@ -212,12 +212,8 @@ class Car {
         }
         return $result;
     }
-    public function getAll($limite = 8) {
-        if($limite) {
-            $users = $this->db->query("SELECT * FROM cars where state = 1 ORDER BY id_car DESC LIMIT $limite");
-        } else {
-            $users = $this->db->query("SELECT * FROM cars where state = 1 ORDER BY id_car DESC");
-        }
+    public function getAll() {
+        $users = $this->db->query("SELECT * FROM cars where state = 1 ORDER BY id_car DESC");
         return $users;
     }
     public function getOne() {

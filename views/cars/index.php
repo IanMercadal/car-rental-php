@@ -1,5 +1,5 @@
 <!-- OUR SERVICES -->
-<section class="contenedor">
+<section id="services" class="contenedor">
     <div class="our-services text-center">
         <h2>Our services</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, perspiciatis? Unde enim nulla maxime animi quasi quos sapiente, id impedit, accusamus temporibus officiis, neque sunt quo excepturi quod fuga sequi!</p>
@@ -41,7 +41,7 @@
     </div>
 </section>
 <!-- CAR LIST -->
-<section class="contenedor">
+<section id="list" class="contenedor">
     <div id="index-cars">
         <h2 class="text-center">Our collection cars</h2>
         <div class="car-list">
@@ -62,12 +62,11 @@
             </div>
             <?php endwhile;?>
         </div>
-        <a href="<?php echo base_url . "car/list" ?>"  class="btn btn-primary">See all</a>
     </div>
 
 </section>
 <!-- TESTIMONIALS -->
-<section class="contenedor">
+<section id="testimonials" class="contenedor">
     <h2 class="text-center">Testimonials</h2>
 
     <div class="testimonials">

@@ -20,31 +20,43 @@
             <a href="<?php echo base_url ?>car/list" class="btn btn-primary">Cars</a>
         </div>
     <?php else : ?>
-        <h1 class="text-center"><?php echo $car->brand . " " . $car->model ?></h1>
         <div class="car-profile">
             <div class="car-profile-info">
+                <h1 class="text-center"><?php echo $car->brand . " " . $car->model ?></h1>
                 <img src="<?php echo base_url . "uploads/images/" . $car->image ?>">
                 <div class="car-data">
                     <div class="car-data-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-coin" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#e7a946" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <circle cx="12" cy="12" r="9" />
-                            <path d="M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 0 0 0 4h2a2 2 0 0 1 0 4h-2a2 2 0 0 1 -1.8 -1" />
-                            <path d="M12 6v2m0 8v2" />
+                        <svg width="42px" height="42px" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: none;
+                                        stroke: #020202;
+                                        stroke-miterlimit: 10;
+                                        stroke-width: 1.91px;
+                                    }
+                                </style>
+                            </defs>
+                            <path class="cls-1" d="M7.23,11.05H12L13,8.18h8.6l.95-1.91-.95-1.91H13L12,1.5H7.23A2.87,2.87,0,0,0,4.36,4.36V8.18A2.88,2.88,0,0,0,7.23,11.05Z" />
+                            <line class="cls-1" x1="8.18" y1="8.18" x2="8.18" y2="4.36" />
+                            <line class="cls-1" x1="18.68" y1="6.27" x2="18.68" y2="4.36" />
+                            <line class="cls-1" x1="15.82" y1="6.27" x2="15.82" y2="4.36" />
+                            <path class="cls-1" d="M13,8.18,15.79,11l-1.35,2.7,2,2,2,2,2,2-.66,2-2,.68-6.08-6.07L9,17.78,5.67,14.4a2.86,2.86,0,0,1-.13-3.91" />
+                            <line class="cls-1" x1="10.38" y1="11.05" x2="8.37" y2="13.05" />
+                            <line class="cls-1" x1="17.14" y1="19.13" x2="18.49" y2="17.78" />
+                            <line class="cls-1" x1="15.12" y1="17.1" x2="16.47" y2="15.75" />
+                            <path class="cls-1" d="M4.89,12.93a3.82,3.82,0,0,1-.53-7.49A3.82,3.82,0,0,1,8.18,6.62" />
                         </svg>
-                        <p><b>Price(Rent):</b> <?php echo $car->price_rent ?>$</p>
+                        <p><b>Rent:</b> <?php echo $car->price_rent ?>$</p>
                     </div>
                     <div class="car-data-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-coin" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#e7a946" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <circle cx="12" cy="12" r="9" />
-                            <path d="M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 0 0 0 4h2a2 2 0 0 1 0 4h-2a2 2 0 0 1 -1.8 -1" />
-                            <path d="M12 6v2m0 8v2" />
+                        <svg width="42px" height="42px" viewBox="0 0 1024 1024" fill="#000000" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M800.8 952c-31.2 0-56-24.8-56-56s24.8-56 56-56 56 24.8 56 56-25.6 56-56 56z m-448 0c-31.2 0-56-24.8-56-56s24.8-56 56-56 56 24.8 56 56-25.6 56-56 56zM344 792c-42.4 0-79.2-33.6-84-76l-54.4-382.4-31.2-178.4c-2.4-19.2-19.2-35.2-37.6-35.2H96c-13.6 0-24-10.4-24-24s10.4-24 24-24h40.8c42.4 0 80 33.6 85.6 76l31.2 178.4 54.4 383.2C309.6 728 326.4 744 344 744h520c13.6 0 24 10.4 24 24s-10.4 24-24 24H344z m40-128c-12.8 0-23.2-9.6-24-22.4-0.8-6.4 1.6-12.8 5.6-17.6s10.4-8 16-8l434.4-32c19.2 0 36-15.2 38.4-33.6l50.4-288c1.6-13.6-2.4-28-10.4-36.8-5.6-6.4-12.8-9.6-21.6-9.6H320c-13.6 0-24-10.4-24-24s10.4-24 24-24h554.4c22.4 0 42.4 9.6 57.6 25.6 16.8 19.2 24.8 47.2 21.6 75.2l-50.4 288c-4.8 41.6-42.4 74.4-84 74.4l-432 32c-1.6 0.8-2.4 0.8-3.2 0.8z" fill="" />
                         </svg>
-                        <p><b>Price(Buy):</b> <?php echo $car->price ?>$</p>
+                        <p><b>Buy:</b> <?php echo $car->price ?>$</p>
                     </div>
                     <div class="car-data-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-event" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#e7a946" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-event" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <rect x="4" y="5" width="16" height="16" rx="2" />
                             <line x1="16" y1="3" x2="16" y2="7" />
@@ -55,35 +67,45 @@
                         <p><b>Age:</b> <?php echo $car->age ?></p>
                     </div>
                     <div class="car-data-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-event" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#e7a946" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <rect x="4" y="5" width="16" height="16" rx="2" />
-                            <line x1="16" y1="3" x2="16" y2="7" />
-                            <line x1="8" y1="3" x2="8" y2="7" />
-                            <line x1="4" y1="11" x2="20" y2="11" />
-                            <rect x="8" y="15" width="2" height="2" />
+                        <svg height="42px" width="42px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+                            <style type="text/css">
+                                .st0 {
+                                    fill: #000000;
+                                }
+                            </style>
+                            <g>
+                                <path class="st0" d="M491.896,264.561c-19.448-45.944-51.883-84.992-92.734-112.589C358.311,124.367,308.96,108.214,256,108.214
+                                c-35.29,0-69,7.169-99.633,20.129C110.4,147.786,71.351,180.23,43.75,221.076C16.154,261.899,0,311.287,0,364.214
+                                c0,4.427,0.109,8.814,0.331,13.185h80.202v-26.371H37.775c1.512-25.395,7.338-49.589,16.766-71.895
+                                c9.315-22.04,22.174-42.25,37.819-59.903l30.234,30.242l18.656-18.661l-30.214-30.218c7.186-6.363,14.766-12.307,22.746-17.677
+                                c31.508-21.274,68.754-34.501,109.033-36.896v42.734h26.37v-42.766c25.423,1.524,49.617,7.338,71.92,16.774
+                                c22.044,9.315,42.258,22.17,59.903,37.814l-30.234,30.234l18.632,18.661l30.238-30.218c6.371,7.186,12.279,14.766,17.69,22.75
+                                c21.266,31.509,34.5,68.758,36.891,109.024h-42.738v26.371h80.162c0.242-4.371,0.35-8.758,0.35-13.185
+                                C512.025,328.931,504.838,295.222,491.896,264.561z" />
+                                <path class="st0" d="M329.375,199.471c-1.415-0.621-3.169,0.073-4.133,1.653l-75.383,124.072c-18.915,2.96-33.4,19.291-33.4,39.033
+                                c0,21.847,17.706,39.556,39.553,39.556c21.842,0,39.553-17.709,39.553-39.556c0-7.395-2.064-14.282-5.593-20.202l40.968-140.396
+                                C331.46,201.859,330.791,200.093,329.375,199.471z M256.012,384.004c-10.924,0-19.778-8.847-19.778-19.774
+                                c0-10.927,8.854-19.782,19.778-19.782c10.92,0,19.774,8.855,19.774,19.782C275.786,375.157,266.932,384.004,256.012,384.004z" />
+                            </g>
                         </svg>
                         <p><b>KM:</b> <?php echo $car->kilometers ?></p>
                     </div>
                     <div class="car-data-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-event" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#e7a946" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <rect x="4" y="5" width="16" height="16" rx="2" />
-                            <line x1="16" y1="3" x2="16" y2="7" />
-                            <line x1="8" y1="3" x2="8" y2="7" />
-                            <line x1="4" y1="11" x2="20" y2="11" />
-                            <rect x="8" y="15" width="2" height="2" />
+                            <circle cx="12" cy="7" r="4" />
+                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
                         </svg>
                         <p><b>Seats:</b> <?php echo $car->seats ?></p>
                     </div>
                     <div class="car-data-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-event" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#e7a946" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-gas-station" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <rect x="4" y="5" width="16" height="16" rx="2" />
-                            <line x1="16" y1="3" x2="16" y2="7" />
-                            <line x1="8" y1="3" x2="8" y2="7" />
-                            <line x1="4" y1="11" x2="20" y2="11" />
-                            <rect x="8" y="15" width="2" height="2" />
+                            <path d="M14 11h1a2 2 0 0 1 2 2v3a1.5 1.5 0 0 0 3 0v-7l-3 -3" />
+                            <path d="M4 20v-14a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v14" />
+                            <line x1="3" y1="20" x2="15" y2="20" />
+                            <path d="M18 7v1a1 1 0 0 0 1 1h1" />
+                            <line x1="4" y1="11" x2="14" y2="11" />
                         </svg>
                         <p><b>Gas:</b> <?php echo $car->type_gas ?></p>
                     </div>
@@ -96,8 +118,8 @@
                         <circle cx="12" cy="12" r="9" />
                         <path d="M9 12l2 2l4 -4" />
                     </svg>
-                    <p>The reservation have been completed successfully</p>
-                    <a class="btn btn-primary" href="<?php echo base_url ?>order/user">Orders</a>
+                    <p class="text-center">The reservation have been completed successfully</p>
+                    <a class="btn btn-secondary" href="<?php echo base_url ?>order/user">Orders</a>
                     <?php unset($_SESSION['order']); ?>
                 </div>
             <?php else : ?>

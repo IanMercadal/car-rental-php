@@ -17,14 +17,14 @@
         </div>
         <div class="testimonials-user">
                 <h1 class="text-center">Orders</h1>
-                <?php if($orders->num_rows > 0 ) : ?>
+                <?php if($user_info->num_rows > 0 ) : ?>
                     <div class="user-orders">
-                        <?php $index = 1; while ($order = $orders->fetch_object()) :?>
+                        <?php $index = 1; while ($info = $user_info->fetch_object()) :?>
                             <div class="user-order">
                                 <p><b><?php echo $index?>. </b></p>
-                                <p><b>Date:</b> <?php echo $order->date ?></p>
-                                <p><b>Service:</b> <?php echo $order->service ?></p>
-                                <p><b>Price:</b> <?php echo $order->price ?>$</p>
+                                <p><b>Date:</b> <?php echo $info->date ?></p>
+                                <p><b>Service:</b> <?php echo $info->service ?></p>
+                                <p><b>Price:</b> <?php echo $info->price ?>$</p>
                                 <?php $index += 1; ?>
                             </div>
                         <?php endwhile; ?>

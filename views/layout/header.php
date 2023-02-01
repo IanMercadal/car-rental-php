@@ -32,10 +32,10 @@
                 <p id="logo-text"><b>Mobility</b></p>
             </div>
             <div class="pages">
-                <a <?php if ($_SERVER['REQUEST_URI'] == "/") { ?> class="active page" <?php } ?> class="page" href="<?php base_url ?>/">Home</a>
-                <a <?php if ($_SERVER['REQUEST_URI'] == "/car/list") { ?> class="active page" <?php } ?> class="page" href="<?php base_url ?>/car/list">Cars</a>
-                <a <?php if ($_SERVER['REQUEST_URI'] == "/service/index") { ?> class="active page" <?php } ?> class="page" href="<?php base_url ?>/service/index">Services</a>
-                <a <?php if ($_SERVER['REQUEST_URI'] == "/testimonial/index") { ?> class="active page" <?php } ?> class="page" href="<?php base_url ?>/testimonial/index">Testimonials</a>
+                <a class="page" href="<?php base_url ?>/">Home</a>
+                <a class="page" href="<?php base_url ?>#services">Services</a>
+                <a class="page" href="<?php base_url ?>#list">Cars</a>
+                <a class="page" href="<?php base_url ?>#testimonials">Testimonials</a>
             </div>
 
             <div class="option">
