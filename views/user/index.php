@@ -25,6 +25,7 @@
                                 <p><b>Date:</b> <?php echo $info->date ?></p>
                                 <p><b>Service:</b> <?php echo $info->service ?></p>
                                 <p><b>Price:</b> <?php echo $info->price ?>$</p>
+                                <img class="order-car-pic" src="<?php echo base_url . "uploads/images/" . $info->image ?>">
                                 <?php $index += 1; ?>
                             </div>
                         <?php endwhile; ?>

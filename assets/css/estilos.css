@@ -724,12 +724,11 @@ a.page  {
     justify-content: flex-start;
     width: 100%;
     height: 100%;
-    background: var(--primary-color);
+    /* background: var(--primary-color); */
     margin-left: auto;
     margin-right: auto;
     max-height: 500px;
     overflow: auto;
-    color: white;
 }
 .orders-user > * {
     padding: 1rem;
@@ -916,7 +915,14 @@ transform: rotate(35deg);
     align-items: flex-start;
     justify-content: flex-start;
     gap: 1rem;
-    margin: 1rem 0 1rem 0;
+    padding: 2rem;
+    width: 100%; 
+    height: 100%;
+}
+.user p {
+    width: 100%;
+    border-bottom: 1px solid var(--primary-color);
+    padding: 1rem;
 }
 .user-profile-pic {
     margin-top: 1rem;
@@ -938,14 +944,16 @@ transform: rotate(35deg);
     width: 100%;
     color: #000;
 }
+.order-car-pic {
+    width: 150px;
+}
 #user-info-br {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height:500px;
+    height: 500px;
     width: 100%;
-    background-color: var(--primary-color);
-    color: white;
+    border: 1px solid var(--primary-color);
 }
 /* ADMIN */
 .admin-car-row {
@@ -1241,7 +1249,6 @@ div.sort-options {
     }
     .user-info {
         grid-template-columns: none;
-        grid-template-rows: 20% 80%;
     }
     #user-info-br {
         height: auto;

@@ -199,17 +199,17 @@ class User {
 
 	public function getAllOrders() {
         $sql = "SELECT * 
-			FROM users U
-			JOIN orders O
-			ON O.id_user = U.id_user";
+		FROM users U
+		JOIN orders O ON O.id_user = U.id_user
+		JOIN cars C ON O.id_car = C.id_car;";
         $user_info = $this->db->query($sql);
 
         return $user_info;
     }
 
-	public function getCarImgae($id_car) {
-		$sql_image_car = "SELECT image from cars where id_car = $id_car";
-		$sql_image = $this->db->query($sql_image_car);
-		return $sql_image;
-	}
+	// public function getCarImages() {
+	// 	$sql_image_car = "SELECT image from cars where id_car = $id_car";
+	// 	$sql_image = $this->db->query($sql_image_car);
+	// 	return $sql_image;
+	// }
 }

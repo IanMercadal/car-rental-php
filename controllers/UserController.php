@@ -7,7 +7,7 @@ class userController {
         // renderizar vista
         $user = new User();
         $user_info = $user->getAllOrders();
-        
+
         require_once './views/user/index.php';
     }
     public function register() {
