@@ -12,6 +12,7 @@
                     <p><b>Date: </b><?php echo $_SESSION["identity"]->date ?></p>
                     <p><b>Email: </b><?php echo $_SESSION["identity"]->email ?></p>
                     <p><b>Registered: </b><?php echo $_SESSION["identity"]->date_creation ?></p>
+                    <p><b>Total Orders: </b><?php echo $user_info->num_rows ?></p>
                 </div>
             </div>
         </div>
