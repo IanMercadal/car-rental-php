@@ -4,11 +4,16 @@ require_once 'models/user.php';
 class userController {
     /* VIEWS */
     public function index() {
-        // renderizar vista
-        $user = new User();
-        $user_info = $user->getAllOrders();
 
-        require_once './views/user/index.php';
+        if(!isset($_SESSION["identity"])) {
+            require_once './views/user/login.php';
+        } else {
+            // renderizar vista
+            $user = new User();
+            $user_info = $user->getAllOrders();
+    
+            require_once './views/user/index.php';
+        }
     }
     public function register() {
         // renderizar vista

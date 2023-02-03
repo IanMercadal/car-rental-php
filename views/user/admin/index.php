@@ -11,7 +11,6 @@
                     <h3>Filter</h3>
                 </div>
                 
-
                 <form class="filter-form">
                     <div>
                         <label>id</label>

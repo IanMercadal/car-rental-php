@@ -29,6 +29,8 @@ body {
     flex-direction: column;
     /* gap: 4rem; */
     align-items: center;
+    height: 100vh;
+    justify-content: space-between;
 }
 h1,h2,h3 {
     margin: 0;
@@ -1248,7 +1250,6 @@ div.sort-options {
     .register, .login {
         display: grid;
         grid-template-columns: none;
-        grid-template-rows: 40% 60%;
         padding: var(--separacion);
         height: auto !important;
     }

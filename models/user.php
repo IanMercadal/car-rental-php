@@ -198,7 +198,7 @@ class User {
     }
 
 	public function getAllOrders() {
-        $sql = "SELECT * 
+        $sql = "SELECT O.date, O.service, O.price, C.image
 		FROM users U
 		JOIN orders O ON O.id_user = U.id_user
 		JOIN cars C ON O.id_car = C.id_car;";
