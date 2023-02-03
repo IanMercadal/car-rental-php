@@ -29,6 +29,21 @@
                 <label>Age</label>
                 <input type="number" name="age">
             </div>
+            <div class="form-car-labels">
+                <label>Type Gas</label>
+                <input type="text" name="type_gas">
+            </div>
+        </div>
+
+        <div class="form-car-inputs">
+            <div class="form-car-labels">
+                <label>Kilometers</label>
+                <input type="number" name="kilometers">
+            </div>
+            <div class="form-car-labels">
+                <label>Seats</label>
+                <input type="number" name="seats">
+            </div>
         </div>
 
         <div class="form-car-inputs">

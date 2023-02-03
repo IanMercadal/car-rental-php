@@ -43,16 +43,23 @@ class carController {
             $price = isset($_POST['price']) ? $_POST['price'] : false;
             $price_rent = isset($_POST['price_rent']) ? $_POST['price_rent'] : false;
             $age = isset($_POST['age']) ? $_POST['age'] : false;
+            $type_gas = isset($_POST['type_gas']) ? $_POST['type_gas'] : false;
+            $kilometers = isset($_POST['kilometers']) ? $_POST['kilometers'] : false;
+            $seats = isset($_POST['seats']) ? $_POST['seats'] : false;
             $description = isset($_POST['description']) ? $_POST['description'] : false;
 
-            if($brand && $model && $price && $age && $description && $price_rent ) {
-                    // Setters
+            
+            if($brand && $model && $price && $age && $description && $price_rent && $type_gas && $kilometers && $seats) {
+                // Setters
                     $car = new Car();
                     $car->setBrand($brand);
                     $car->setModel($model);
                     $car->setPrice($price);
                     $car->setPriceRent($price_rent);
                     $car->setAge($age);
+                    $car->setTypeGas($type_gas);
+                    $car->setKilometers($kilometers);
+                    $car->setSeats($seats);
                     $car->setDescription($description);
 
                     // Save image
