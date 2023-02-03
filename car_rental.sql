@@ -33,11 +33,14 @@ CREATE TABLE `cars` (
   `image` varchar(50) DEFAULT NULL,
   `description` varchar(255) NOT NULL,
   `state` tinyint NOT NULL DEFAULT '1',
+  `kilometers` int NOT NULL DEFAULT '0',
+  `seats` int NOT NULL DEFAULT '2',
+  `type_gas` varchar(10) NOT NULL DEFAULT 'oil',
   `id_user` int NOT NULL,
   PRIMARY KEY (`id_car`,`id_user`),
   KEY `fk_cars_users1_idx` (`id_user`),
   CONSTRAINT `fk_cars_users1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +49,7 @@ CREATE TABLE `cars` (
 
 LOCK TABLES `cars` WRITE;
 /*!40000 ALTER TABLE `cars` DISABLE KEYS */;
-INSERT INTO `cars` VALUES (8,'BMW','M5',100000,500,2019,'2023-01-03','pexels-mike-b-170811.jpg','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut velit at metus vulputate ornare. Etiam pulvinar aliquet ullamcorper. Pellentesque ornare dui nisi, nec ullamcorper nisl pharetra sit amet. Morbi malesuada neque eget sem aliquam pulvinar. ',1,4),(10,'Alfa Romeo','Sport 200',60000,250,2012,'2023-01-04','pexels-pixabay-210019 (1).jpg','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut velit at metus vulputate ornare. Etiam pulvinar aliquet ullamcorper. Pellentesque ornare dui nisi, nec ullamcorper nisl pharetra sit amet. Morbi malesuada neque eget sem aliquam pulvinar. ',1,4),(11,'Range Rover','Evoque',30000,175,2020,'2023-01-04','pexels-mike-b-116675 (1).jpg','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut velit at metus vulputate ornare. Etiam pulvinar aliquet ullamcorper. Pellentesque ornare dui nisi, nec ullamcorper nisl pharetra sit amet. Morbi malesuada neque eget sem aliquam pulvinar. ',1,4),(12,'Mercedes','Clase E Cabrio',90000,225,2019,'2023-01-04','pexels-mike-b-1335077.jpg','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut velit at metus vulputate ornare. Etiam pulvinar aliquet ullamcorper. Pellentesque ornare dui nisi, nec ullamcorper nisl pharetra sit amet. Morbi malesuada neque eget sem aliquam pulvinar. ',1,4),(13,'Lexus','ES SPORT',90000,300,2021,'2023-01-04','pexels-garvin-st-villier-3874337.jpg','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut velit at metus vulputate ornare. Etiam pulvinar aliquet ullamcorper. Pellentesque ornare dui nisi, nec ullamcorper nisl pharetra sit amet. Morbi malesuada neque eget sem aliquam pulvinar. ',1,4),(14,'Audi','R8',120000,300,2022,'2023-01-04','audi.jpg','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut velit at metus vulputate ornare. Etiam pulvinar aliquet ullamcorper. Pellentesque ornare dui nisi, nec ullamcorper nisl pharetra sit amet. Morbi malesuada neque eget sem aliquam pulvinar.',1,4),(15,'Audi','Sedan',26000,300,2019,'2023-01-04','audi-sedan .jpg','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut velit at metus vulputate ornare. Etiam pulvinar aliquet ullamcorper. Pellentesque ornare dui nisi, nec ullamcorper nisl pharetra sit amet. Morbi malesuada neque eget sem aliquam pulvinar.',1,4),(16,'BMW','Coupé',18000,160,2011,'2023-01-04','bmw-coupe.jpg','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut velit at metus vulputate ornare. Etiam pulvinar aliquet ullamcorper. Pellentesque ornare dui nisi, nec ullamcorper nisl pharetra sit amet. Morbi malesuada neque eget sem aliquam pulvinar.',1,4);
+INSERT INTO `cars` VALUES (8,'BMW','M5',100000,500,2019,'2023-01-03','pexels-mike-b-170811.jpg','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut velit at metus vulputate ornare. Etiam pulvinar aliquet ullamcorper. Pellentesque ornare dui nisi, nec ullamcorper nisl pharetra sit amet. Morbi malesuada neque eget sem aliquam pulvinar. ',1,10,5,'oil',4),(10,'Alfa Romeo','Sport 200',60000,250,2012,'2023-01-04','pexels-pixabay-210019.jpg','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut velit at metus vulputate ornare. Etiam pulvinar aliquet ullamcorper. Pellentesque ornare dui nisi, nec ullamcorper nisl pharetra sit amet. Morbi malesuada neque eget sem aliquam pulvinar. ',1,50,4,'oil',4),(11,'Range Rover','Evoque',30000,175,2020,'2023-01-04','pexels-mike-b-116675.jpg','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut velit at metus vulputate ornare. Etiam pulvinar aliquet ullamcorper. Pellentesque ornare dui nisi, nec ullamcorper nisl pharetra sit amet. Morbi malesuada neque eget sem aliquam pulvinar. ',1,1000,5,'diesel',4),(12,'Mercedes','Clase E Cabrio',90000,225,2019,'2023-01-04','pexels-mike-b-1335077.jpg','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut velit at metus vulputate ornare. Etiam pulvinar aliquet ullamcorper. Pellentesque ornare dui nisi, nec ullamcorper nisl pharetra sit amet. Morbi malesuada neque eget sem aliquam pulvinar. ',1,1200,5,'oil',4),(13,'Lexus','ES SPORT',90000,300,2021,'2023-01-04','pexels-garvin-st-villier-3874337.jpg','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut velit at metus vulputate ornare. Etiam pulvinar aliquet ullamcorper. Pellentesque ornare dui nisi, nec ullamcorper nisl pharetra sit amet. Morbi malesuada neque eget sem aliquam pulvinar. ',1,200,3,'oil',4),(14,'Audi','R8',120000,300,2022,'2023-01-04','audi.jpg','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut velit at metus vulputate ornare. Etiam pulvinar aliquet ullamcorper. Pellentesque ornare dui nisi, nec ullamcorper nisl pharetra sit amet. Morbi malesuada neque eget sem aliquam pulvinar.',1,300,3,'oil',4),(15,'Audi','Sedan',26000,300,2019,'2023-01-04','audi-sedan.jpg','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut velit at metus vulputate ornare. Etiam pulvinar aliquet ullamcorper. Pellentesque ornare dui nisi, nec ullamcorper nisl pharetra sit amet. Morbi malesuada neque eget sem aliquam pulvinar.',1,400,5,'oil',4),(16,'BMW','Coupé',18000,160,2011,'2023-01-04','bmw-coupe.jpg','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut velit at metus vulputate ornare. Etiam pulvinar aliquet ullamcorper. Pellentesque ornare dui nisi, nec ullamcorper nisl pharetra sit amet. Morbi malesuada neque eget sem aliquam pulvinar.',1,500,5,'oil',4),(32,'Tesla','Teslanius',10000,100,2010,'2023-02-03','lexus.jpg','asdbfasdbflksadbfkñlsadbnfñklsabnd´kfbnsadklfbnasdl´kñbnfsdpaflkasdbnfksadbnfsadfsad',0,100000,5,'hybrid',4);
 /*!40000 ALTER TABLE `cars` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -69,7 +72,7 @@ CREATE TABLE `orders` (
   KEY `fk_testimonials_cars1_idx` (`id_car`),
   CONSTRAINT `fk_testimonials_cars1` FOREIGN KEY (`id_car`) REFERENCES `cars` (`id_car`),
   CONSTRAINT `fk_testimonials_users1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -78,6 +81,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (21,26,15,'2023-01-14','rent',300),(22,26,8,'2023-01-14','buy',100000),(23,26,13,'2023-01-14','rent',300),(24,26,16,'2023-02-01','rent',160),(25,26,16,'2023-02-02','rent',160),(26,26,16,'2023-03-12','rent',160),(27,26,16,'2023-02-09','rent',160),(28,26,16,'2023-02-16','rent',160),(29,26,16,'2023-02-23','rent',160),(30,4,15,'2023-02-02','rent',300),(31,4,15,'2023-02-03','rent',300),(32,4,15,'2023-02-04','rent',300),(33,26,14,'2023-02-03','rent',300),(34,26,14,'2023-02-24','rent',300),(35,26,10,'2023-04-28','rent',250),(36,4,32,'2023-02-04','rent',100),(37,4,32,'2023-02-05','rent',100),(38,4,8,'2023-02-04','buy',100000);
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -122,4 +126,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-01-13  7:54:30
+-- Dump completed on 2023-02-03 11:48:37
